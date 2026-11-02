@@ -260,3 +260,10 @@ differential must exceed bridge fees and risk premium.
   creates execution risk.
 - Do not ignore composability during governance decisions. Voting to change parameters
   on one protocol can cascade through all protocols that depend on it.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (DeFi protocol economics):** Verify collateral parameters, oracle freshness, fees, liquidation and withdrawal constraints.
+- **Independent validation:** Distinguish net yield from nominal rewards; model depeg, hack and liquidity stress.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

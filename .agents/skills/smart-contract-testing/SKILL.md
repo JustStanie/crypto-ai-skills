@@ -259,3 +259,10 @@ Examine uncovered branches specifically. 100% line coverage with 60% branch cove
 - **Never use `console.log` as a testing strategy** — write assertions. Logs do not catch regressions.
 - **Never deploy to mainnet with only unit tests** — integration tests against forked state are mandatory for contracts that interact with external protocols.
 - **Never skip testing upgrade paths** — test that storage is preserved across proxy upgrades and that initializers cannot be re-called.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Contract engineering):** Check compiler, EVM fork, dependency versions, access control and storage-layout assumptions.
+- **Independent validation:** Validate adversarial properties with tests and independent security review before deployment.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

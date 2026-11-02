@@ -60,3 +60,10 @@ The OpenZeppelin Governor framework provides modular, battle-tested governance i
 *   **Upgradeable Proxy Without Governance Gate.** Allowing contract upgrades through admin keys rather than the governance process itself bypasses the entire governance security model. Proxy upgrades must flow through the timelock.
 
 *   **Single-Transaction Proposal Creation and Voting.** Allowing proposals to be created and voted on in the same block enables atomic governance manipulation. Enforce a voting delay of at least one block between proposal creation and vote start.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Contract engineering):** Check compiler, EVM fork, dependency versions, access control and storage-layout assumptions.
+- **Independent validation:** Validate adversarial properties with tests and independent security review before deployment.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

@@ -134,3 +134,10 @@ The US Office of Foreign Assets Control (OFAC) maintains a Specially Designated 
 ## Version and Evidence Check
 
 On-chain transaction linkage is evidence of fund flow, not proof of the real-world identity or intent of an entity. Clearly identify inference confidence and alternative explanations.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Custody and security):** Treat bridge, authorization, signing, key handling and replay risk as potentially loss-causing.
+- **Independent validation:** Avoid secrets in examples; validate controls, testnets, incident procedures and third-party contracts.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

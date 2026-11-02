@@ -144,3 +144,10 @@ Critical considerations: legal authorization (do you have the right to move user
 - Do not withhold information from affected users for more than a few hours. Transparency builds trust; cover-ups destroy protocols.
 - Do not skip the post-mortem. Every incident that does not result in a thorough analysis and remediation plan is an incident that will repeat.
 - Do not rely on a response plan that has never been tested. Run tabletop exercises quarterly. Practice the signing ceremony for emergency pause. Verify that the phone numbers in your escalation list are current.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Custody and security):** Treat bridge, authorization, signing, key handling and replay risk as potentially loss-causing.
+- **Independent validation:** Avoid secrets in examples; validate controls, testnets, incident procedures and third-party contracts.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

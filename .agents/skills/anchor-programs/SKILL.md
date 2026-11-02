@@ -20,7 +20,7 @@ Getting started with Anchor means setting up your Rust environment and installin
 
 1.  **Install Rust:** Ensure you have Rust and Cargo installed via `rustup`.
     ```bash
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     source $HOME/.cargo/env
     rustup component add rustfmt
     ```
@@ -268,3 +268,10 @@ describe("my-anchor-program", () => {
 **Missing Signer Checks.** Forgetting to mark an account with `#[account(signer)]` when that account is required to authorize an action allows unauthorized users to execute sensitive instructions. Every instruction that modifies state or transfers value from a user-owned account must verify that the user has signed the transaction.
 
 **Insecure CPIs.** When performing a Cross-Program Invocation (CPI), failing to validate the target program's ID or the accounts passed to it can lead to calling malicious programs or unintended state changes. Always explicitly check the program ID and ensure all accounts passed to the CPI are correctly validated, especially if they are derived from user input.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

@@ -283,3 +283,10 @@ module my_move_package::my_nft_tests {
 ## Anti-Patterns
 
 *   **Ignoring Resource Abilities.** Attempting to use a struct as an on-chain object without `has key` and `has store` will result in compilation errors. Not using `has drop` when a resource should be able to be deleted will also cause issues.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

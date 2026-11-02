@@ -33,7 +33,7 @@ Or for Foundry:
 
 ```bash
 # Install Foundry if you haven't
-curl -L https://foundry.paradigm.xyz | bash
+# Security: download the verified official installer, inspect it before executing, and follow the current platform-specific installation guide.
 foundryup
 
 # Initialize a new project
@@ -219,3 +219,10 @@ timelock.revokeRole(proposerRole, deployer.address);
 *   **Centralized Timelock Admin.** Leaving the `DEFAULT_ADMIN_ROLE` for the `TimelockController` in a single external address (like a deployer EOA) creates a single point of failure, allowing unilateral bypassing of the timelock's security. Grant this role to the timelock itself, or a robust multisig/governance contract.
 *   **Timelock as Only Admin.** While decentralizing the admin role is good, making the timelock the *sole* admin of critical contracts without any emergency override can make the system rigid and unresponsive to critical bugs; balance with a secure emergency path.
 *   **Missing or Incorrect Access Control.** Failing to correctly set up the `PROPOSER_ROLE` and `EXECUTOR_ROLE` can lead to unauthorized
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Custody and security):** Treat bridge, authorization, signing, key handling and replay risk as potentially loss-causing.
+- **Independent validation:** Avoid secrets in examples; validate controls, testnets, incident procedures and third-party contracts.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

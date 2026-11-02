@@ -181,3 +181,10 @@ This `send_payment` abstraction handles the complexities of route finding and mu
 **Neglecting Invoice Expiration.** Generating invoices with no expiration or an excessively long one, leading to potential stale payment requests or holding funds hostage. Instead, set appropriate `expiry` times on invoices (`lncli addinvoice --expiry <seconds>`) and handle expired invoices gracefully in your application logic.
 
 **Underestimating On-Chain Fees for Channel Management.** Opening and closing channels are on-chain transactions subject to Bitcoin network fees. Opening too many small channels or frequently closing/reopening can become expensive. Instead, plan your channel strategy to minimize on-chain operations, preferring larger, long-lived channels and using rebalancing for liquidity management.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

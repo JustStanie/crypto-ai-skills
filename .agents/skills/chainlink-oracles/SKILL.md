@@ -21,7 +21,7 @@ To develop with Chainlink, you'll primarily work with Solidity smart contracts a
 1.  **Install development tools:**
     ```bash
     # For Foundry
-    curl -L https://foundry.paradigm.xyz | bash
+    # Security: download the verified official installer, inspect it before executing, and follow the current platform-specific installation guide.
     foundryup
 
     # For Hardhat (if preferred)
@@ -75,7 +75,8 @@ contract PriceConsumerV3 {
             uint256 updatedAt,
             uint80 answeredInRound
         ) = priceFeed.latestRoundData();
-        require(answeredInRound >= roundID, "Price data is stale or invalid for current round.");
+        require(price > 0 && updatedAt > 0 && updatedAt <= block.timestamp, "Invalid feed answer or timestamp.");
+        // Check block.timestamp - updatedAt against a feed-specific maximum age in the consuming protocol.
         return (roundID, price, startedAt, updatedAt, answeredInRound);
     }
 
@@ -290,3 +291,15 @@ contract AutomatedCounter is KeeperCompatibleInterface {
 ## Version and Evidence Check
 
 For price feeds validate answer sign, scale/decimals and freshness using updatedAt and a feed-specific timeout. Oracle round fields and supported interfaces may differ by deployment.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Custody and security):** Treat bridge, authorization, signing, key handling and replay risk as potentially loss-causing.
+- **Independent validation:** Avoid secrets in examples; validate controls, testnets, incident procedures and third-party contracts.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.
+
+
+## Confirmed interface update (Chainlink)
+
+The `answeredInRound` field is deprecated for many AggregatorV3Interface deployments; do not use it as the sole freshness gate. Validate `updatedAt` with a feed-specific heartbeat and maximum-age policy, check answer sign and decimals, and review https://docs.chain.link/data-feeds/api-reference and https://docs.chain.link/data-feeds/overview before deployment.

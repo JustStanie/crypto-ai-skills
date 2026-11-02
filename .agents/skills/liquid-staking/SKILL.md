@@ -228,3 +228,10 @@ Lido operators are expected to run MEV-Boost. Rocket Pool operators choose indep
   earning 4% staking yield, the position is deeply negative in dollar terms.
 - Do not ignore the tax implications of staking rewards in your jurisdiction. Many
   jurisdictions treat staking rewards as income at time of receipt.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (DeFi protocol economics):** Verify collateral parameters, oracle freshness, fees, liquidation and withdrawal constraints.
+- **Independent validation:** Distinguish net yield from nominal rewards; model depeg, hack and liquidity stress.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

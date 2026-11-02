@@ -213,3 +213,10 @@ When your dApp needs to interact with assets originating from Ethereum mainnet, 
 *   **Deploying Without Verification.** Deploying contracts without verifying them on PolygonScan erodes user trust and makes debugging and community engagement difficult. Always budget time for verification.
 *   **Neglecting Gas Estimation.** Sending transactions without proper gas estimation can lead to failed transactions or overpaying for gas. Use `estimateGas` and EIP-1559 parameters.
 *   **Over-reliance on Centralized Servers.** For critical dApp components, avoid centralized servers for data storage or business logic that could introduce single points of failure. Explore decentralized storage solutions like IPFS/Filecoin or decentralized databases.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

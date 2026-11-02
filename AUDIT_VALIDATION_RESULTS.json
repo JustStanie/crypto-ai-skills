@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "repository": "crypto-ai-skills",
+  "source": "current .agents/skills/*/SKILL.md and docs/audit/review-baseline.json",
+  "generator": "scripts/sync_skill_audit.py",
+  "total_skills": 122,
+  "specialist_skills": 120,
+  "support_skills": 2,
+  "categories": 7,
+  "category_counts": {
+    "Crypto Development": 24,
+    "Crypto Infrastructure": 14,
+    "Crypto Security": 16,
+    "Crypto Trading": 14,
+    "Cryptocurrency Pro": 10,
+    "Decentralized Finance (DeFi)": 16,
+    "Web3 Development": 26
+  },
+  "static_validation": "passed",
+  "static_checks_performed": [
+    "frontmatter delimiters and mandatory name/description",
+    "folder and Skill identity",
+    "Markdown H1",
+    "balanced Markdown code fences",
+    "category assignment coverage",
+    "deterministic generated artifact consistency"
+  ],
+  "expert_review_counts": {
+    "historical_static_review_current": 120
+  },
+  "errors": [],
+  "warnings": [],
+  "not_tested": [
+    "complete YAML schema beyond required metadata",
+    "source code compilation and execution",
+    "live APIs, networks, payment systems and markets",
+    "full expert re-review of every claim",
+    "all internal or external markdown links"
+  ],
+  "expert_review_policy": "Changing a Skill SHA-256 invalidates the previous historical review match; generator never self-certifies substantive correctness."
+}

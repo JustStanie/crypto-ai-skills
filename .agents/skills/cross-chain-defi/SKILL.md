@@ -24,7 +24,7 @@ To begin building cross-chain DeFi applications, you typically integrate with es
     npm install --save-dev hardhat
     npx hardhat init
     # OR
-    curl -L get.foundry.sh | bash
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     foundryup
     ```
 3.  **Cross-chain SDK Installation (Example: AxelarJS SDK for General Message Passing):**
@@ -252,3 +252,10 @@ async function monitorAxelarTx(txHash) {
 *   **Unbounded Cross-Chain Message Payloads.** Sending arbitrarily large payloads across bridges can exceed destination chain gas limits or trigger unexpected costs. Validate and cap payload sizes on the source chain before submission.
 
 *   **Assuming Instant Cross-Chain Settlement.** Building UX flows that block on cross-chain confirmation leads to degraded user experience. Design for asynchronous completion with optimistic UI updates and background status polling.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (DeFi protocol economics):** Verify collateral parameters, oracle freshness, fees, liquidation and withdrawal constraints.
+- **Independent validation:** Distinguish net yield from nominal rewards; model depeg, hack and liquidity stress.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

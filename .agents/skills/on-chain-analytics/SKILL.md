@@ -220,3 +220,10 @@ Signal research pipeline:
 - **Do not front-run whale transactions based on mempool data without understanding MEV risks.** Your transaction can be sandwiched, and the whale transaction might not execute as expected.
 - **Do not pay for expensive analytics tools before building basic competency with free tools.** Dune Analytics and DefiLlama provide enormous value at zero cost. Master these before spending on premium platforms.
 - **Do not assume on-chain signals work the same across all chains.** Ethereum on-chain dynamics differ from Solana, which differs from Bitcoin. Each chain has its own patterns and data structures.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

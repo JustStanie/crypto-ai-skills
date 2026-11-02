@@ -21,7 +21,7 @@ To begin building Substrate pallets, you need a Rust development environment and
 1.  **Install Rust and `rustup`:**
     Substrate requires a specific Rust toolchain. Install `rustup` and then the `nightly` toolchain:
     ```bash
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     rustup update stable
     rustup update nightly
     rustup default nightly
@@ -266,3 +266,10 @@ Substrate enables forkless runtime upgrades. This is a critical feature.
 *   **Direct Storage Access Outside Pallet.** Modifying another pallet's storage directly. This breaks encapsulation and can lead to unexpected state corruptions during upgrades. Instead, expose well-defined interfaces (e.g., via `frame_support::traits`) for inter-pallet communication.
 *   **Ignoring `BoundedVec` and `BoundedBTreeSet`.** Using unbounded data structures like `Vec` or `BTreeSet` for on-chain storage. This can lead to runtime bloat and potential DoS attacks if users can fill up storage without limits. Always use `BoundedVec`, `BoundedBTreeSet`, and similar bounded types with a `MaxBytes` or `MaxItems` constant.
 *   **Insufficient Error Handling.** Not having granular error types or not returning `Dispatch
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

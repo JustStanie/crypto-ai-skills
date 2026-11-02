@@ -22,7 +22,7 @@ Building with intent-based systems often involves interacting with existing prot
     Set up your preferred Solidity development environment, such as Foundry or Hardhat.
     ```bash
     # For Foundry
-    curl -L https://foundry.paradigm.xyz | bash
+    # Security: download the verified official installer, inspect it before executing, and follow the current platform-specific installation guide.
     foundryup
 
     # For Hardhat
@@ -300,3 +300,10 @@ contract IntentSettlement is EIP712 {
 *   **Missing Intent Expiry Enforcement.** Accepting intents without validating expiry timestamps on-chain allows stale intents to be filled at outdated prices. Always check `block.timestamp <= intent.validUntil` before execution.
 
 *   **Ignoring Partial Fill Scenarios.** Designing intents that must be filled entirely or not at all reduces fill rates for large orders. Support partial fills with proportional minimum output requirements to improve execution across fragmented liquidity.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Trading and execution):** Use venue-specific rules, actual order-book depth, fees, slippage, latency and position limits.
+- **Independent validation:** Separate backtests from live execution; check look-ahead bias, failure recovery, and negative tail scenarios.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

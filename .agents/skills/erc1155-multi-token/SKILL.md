@@ -20,7 +20,7 @@ You'll primarily use the Foundry development environment for Solidity projects d
 
 1.  **Install Foundry:**
     ```bash
-    curl -L https://foundry.paradigm.xyz | bash
+    # Security: download the verified official installer, inspect it before executing, and follow the current platform-specific installation guide.
     foundryup
     ```
 2.  **Initialize a new Foundry project:**
@@ -211,3 +211,15 @@ contract MyDynamicMultiToken is ERC1155, ERC1155URIStorage, Ownable {
 ## Version and Evidence Check
 
 Enforce supply caps if an ERC-1155 token ID represents a unique NFT; merely minting one unit does not establish uniqueness. Confirm OpenZeppelin import and extension APIs for the installed version.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Contract engineering):** Check compiler, EVM fork, dependency versions, access control and storage-layout assumptions.
+- **Independent validation:** Validate adversarial properties with tests and independent security review before deployment.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.
+
+
+## Verified ERC-1155 safety notes
+
+OpenZeppelin 5.x ERC1155 requires receiver acceptance checks for contract recipients, and `ERC1155Supply.totalSupply(id) == 1` does **not** permanently enforce uniqueness. For unique IDs explicitly enforce mint supply limits. Verify extension inheritance, permissions and URI handling against https://docs.openzeppelin.com/contracts/5.x/api/token/erc1155.

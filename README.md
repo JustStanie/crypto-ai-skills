@@ -1,6 +1,124 @@
-# Crypto AI Thinking Skills
+# Crypto AI Skills
 
-A local collection of **121 reusable Skills** for crypto, DeFi, Web3 and blockchain research, design, and consultation. Includes **120 domain-specific Skills** and **1 default coordinator**. The original domain methods are kept in their own `SKILL.md` files.
+## Automated Skill catalog and audit status
+
+<!-- AUTO-SKILL-SUMMARY:START -->
+**Live inventory:** 122 Skills = 120 specialist + 2 support; **7 categories**.
+
+The up-to-date category/Skill catalog is [`SKILL_INDEX.md`](SKILL_INDEX.md). The automatically synchronized audit status is [`TECHNICAL_AUDIT.md`](TECHNICAL_AUDIT.md); machine-readable checks are [`AUDIT_VALIDATION_RESULTS.json`](AUDIT_VALIDATION_RESULTS.json) and [`audit-register.json`](audit-register.json).
+
+**Historical review status:** 120 unchanged since prior static review; 0 changed and pending reassessment; 0 new/unreviewed.
+
+To refresh this catalog and audit reports, run `python scripts/sync_skill_audit.py --write` manually after editing Skills. No GitHub Actions or automatic commits are configured. This does not imply a new expert review.
+<!-- AUTO-SKILL-SUMMARY:END -->
+
+## Local audit maintenance — manual only
+
+`SKILL_INDEX.md`, `audit-register.json`, `AUDIT_VALIDATION_RESULTS.json` and `TECHNICAL_AUDIT.md` are now **generated, not manually maintained**. The generator also refreshes the inventory summary at the top of this README. For manual maintenance, caveats and review status definitions, see [`AUDIT_AUTOMATION.md`](AUDIT_AUTOMATION.md).
+
+```powershell
+python .\scripts\sync_skill_audit.py --write
+python .\scripts\sync_skill_audit.py --check
+python -m unittest discover -s tests -p "test_*.py" -v
+```
+
+No GitHub Actions are configured: nothing runs on push or pull request, and no automatic commits are created. The local audit generator runs **only when explicitly invoked**. **Structural validation is not a fresh technical expert review.** New/changed methodologies require a separate substantive assessment.
+
+
+
+A local collection of **122 reusable Skills** for crypto, DeFi, Web3 and blockchain research, design, and consultation. Includes **120 domain-specific Skills** **1 default coordinator**, and **1 context initializer**. The original domain methods are kept in their own `SKILL.md` files.
+
+## Working with multiple chats and local Skills
+
+**Recommended rule: one repository = one specialist knowledge library; one chat = one independent topic or project.**
+
+### Keep independent chats independent
+
+**A new chat should not inherit your preferences or decisions from an unrelated previous chat.** The agent chooses Skills and makes recommendations from the **current question**, the current chat and relevant evidence. Sharing the same repository only means the same specialist methods are available; it does not make a past topic a preference.
+
+**Example (Crypto):** if chat A is about developing Solana smart contracts and chat B is about constructing a crypto portfolio, the agent should **not** promote SOL merely because you discussed Solana in chat A. SOL may be considered only if it independently fits the portfolio criteria or you request it.
+
+If you **want** to continue an earlier discussion in a new chat, explicitly say so and provide its summary or files (or authorize the agent to retrieve relevant prior work when supported). Do not assume earlier decisions are present. `*-context-init` is **optional** and only maps available Skills; it **does not import earlier chats or clear memory**.
+
+> **Limit:** this policy controls how the repo instructs the agent to behave; it cannot disable built-in cross-chat memory, global instructions, or other context sources provided by Codex/Claude. For strict separation, check the client's memory/privacy controls and workspace boundaries.
+
+| Your situation | What to do | Is context initialization required? |
+|---|---|---|
+| New, unrelated question within crypto, DeFi, blockchain, trading and Web3 | Open **crypto-ai-skills** in Codex Desktop or Claude Code and start a **new chat/thread**. Ask your question normally. | **No.** Repository instructions already direct the agent to the coordinator. |
+| Continue an earlier discussion on the same problem | Return to the **existing chat** to retain its history and decisions. | No. |
+| Want a quick overview of available Skills, or have just changed the library | In that chat, explicitly invoke the **context initializer**. | Optional, useful on demand. |
+| Want to force a particular specialist | Invoke `$skill-name` (Codex) or `/skill-name` (Claude Code), if the client discovers that Skill. | No. |
+| Need a different domain | Open that domain's **separate repository** and start a chat there. | No. Other repositories' Skills are not automatically included. |
+
+### Start a new topic
+
+**Codex Desktop:** open the `'crypto-ai-skills'` repository as a project, choose **New Thread / New Chat**, then ask your question. You do **not** need to clone the repository again or create a new folder for each discussion.
+
+**Claude Code:** open a new session from the repository root (assuming the `claude` CLI is installed):
+
+```powershell
+cd C:\Code\Projects\SKILLS\crypto-ai-skills
+claude
+```
+
+Within the active session, use `/clear` for a fresh conversation only if supported by your installed version, or exit and start `claude` again. Reuse an existing session when previous decisions are relevant.
+
+### How the assistant picks Skills
+
+1. The project `AGENTS.md` (Codex) or `CLAUDE.md` (Claude Code) directs the agent to the default `crypto-skill-router`.
+2. The coordinator identifies the topic, consults available Skill metadata, and reads only the relevant `SKILL.md` file(s).
+3. You receive one coherent answer. Full instructions for all Skills are **not** loaded into every new conversation.
+
+**Run `crypto-context-init` only when you want to initialize or refresh the catalog explicitly.**
+
+| Agent | Optional catalog initialization | Explicit coordinator |
+|---|---|---|
+| Codex Desktop | `$crypto-context-init` | `$crypto-skill-router` |
+| Claude Code | `/crypto-context-init` | `/crypto-skill-router` |
+
+If the command is not discovered, ask: `Read .agents/skills/crypto-context-init/SKILL.md and provide a brief overview of the local skill catalog without loading all specialists.`
+
+**Important:** initialization is not model training or permanent memory. A new chat has separate conversation history. If you need to continue specific decisions from another chat, provide a concise summary or relevant files. Repository files and Skills remain available in new sessions, subject to your agent version, file access, and global instruction priority.
+
+## Clone and open this repository (Windows 11)
+
+The repository is hosted at **https://github.com/JustStanie/crypto-ai-skills**.
+
+For a **first-time clone** in PowerShell:
+
+```powershell
+cd C:\Code\Projects\SKILLS
+git clone https://github.com/JustStanie/crypto-ai-skills.git
+cd crypto-ai-skills
+powershell -NoProfile -ExecutionPolicy Bypass -File .\setup-claude-skills.ps1
+```
+
+This setup links `.claude/skills/` to the existing `.agents/skills/` library **locally** on Windows; it does not install Skills globally. Verify the link and Skill discovery in your Claude Code version. A Windows Junction is not preserved by Git, so run the setup after cloning on another machine. If the folder is already cloned, open it directly; **do not clone again** for a new question. To update an existing clone, use `git pull` when you intend to fetch remote changes and have checked your local work.
+
+## Initialize the AI Skill Context (optional)
+
+Use this at the start of a new chat to load a **compact map of available skills**, not every skill's complete instructions. Initialization does **not** retrain the model or create persistent memory. You can skip it and ask your question normally: the coordinator is configured in `AGENTS.md` / `CLAUDE.md`.
+
+| Platform | Initialize context | Ask the coordinator |
+|---|---|---|
+| **Codex Desktop** | `$crypto-context-init` | `$crypto-skill-router` |
+| **Claude Code** | `/crypto-context-init` | `/crypto-skill-router` |
+
+**Codex example:**
+
+```text
+$crypto-context-init Review the locally available capabilities for this chat without loading all specialist instructions.
+```
+
+**Claude Code example:**
+
+```text
+/crypto-context-init Initialize the local skill index for this session and briefly summarize the available categories.
+```
+
+If native Skill invocation is unavailable, use the text instruction `Read .agents/skills/crypto-context-init/SKILL.md and initialize this chat.`
+
+The reference inventory is `SKILL_INDEX.md`. The coordinator selects and reads only the relevant `SKILL.md` files when answering actual questions. After cloning on Windows, run `powershell -NoProfile -ExecutionPolicy Bypass -File .\setup-claude-skills.ps1` from the repository root to create the local Claude junction.
 
 ## How it works
 

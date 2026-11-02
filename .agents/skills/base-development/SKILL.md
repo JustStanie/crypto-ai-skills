@@ -23,7 +23,7 @@ To start developing on Base, you need a development environment and access to a 
 
     ```bash
     # Install Foundry (if not already installed)
-    curl -L https://foundry.paradigm.xyz | bash
+    # Security: download the verified official installer, inspect it before executing, and follow the current platform-specific installation guide.
     foundryup
     ```
 
@@ -254,3 +254,10 @@ After deploying or interacting, always verify your transactions on a block explo
 **Assuming L1 gas costs.** Underestimating the *relative* cost savings on Base by not designing contracts to leverage the cheaper transaction environment. Optimize for more frequent or complex on-chain interactions that would be prohibitive on L1.
 
 **Poor error handling for transactions.** Not gracefully handling transaction reverts, network errors, or user rejections can lead to a frustrating user experience. Implement robust try-catch blocks and informative feedback.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

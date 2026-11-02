@@ -165,3 +165,10 @@ Use gradient boosting (LightGBM, XGBoost) to combine signals, but with disciplin
 - **Do not curve-fit to specific events.** If your strategy only works because of the Luna crash or FTX collapse, it is not a strategy; it is hindsight.
 - **Do not deploy without paper trading.** The gap between backtest and live is always larger than you think. API quirks, fill assumptions, and timing differences will surprise you.
 - **Do not use too many indicators.** If your entry signal requires RSI + MACD + Bollinger + Ichimoku + volume + 3 custom indicators to all agree, you have zero trades and an overfit mess.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Trading and execution):** Use venue-specific rules, actual order-book depth, fees, slippage, latency and position limits.
+- **Independent validation:** Separate backtests from live execution; check look-ahead bias, failure recovery, and negative tail scenarios.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

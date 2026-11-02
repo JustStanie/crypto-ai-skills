@@ -235,3 +235,10 @@ for (const event of transferEvents) {
 - **Using the wrong chain ID.** When switching networks, the provider and signer must both target the same chain.
 - **Ignoring nonce management.** When sending multiple transactions rapidly, manually manage nonces to avoid replacement or stuck transactions.
 - **Hardcoding gas prices.** Gas markets are dynamic; always fetch current fee data or use the provider defaults.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

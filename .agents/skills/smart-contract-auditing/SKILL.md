@@ -101,3 +101,10 @@ Each finding should include: title, severity, affected code (file and line numbe
 - Do not ignore test coverage. If a function has no tests, it is much more likely to contain bugs. Flag untested code paths.
 - Do not copy-paste findings from previous audits without verifying they apply to the current codebase. Each protocol has unique assumptions and attack surfaces.
 - Do not skip re-review of fixes. A fix for one vulnerability can introduce another. Always verify that remediations are correct and complete.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Contract engineering):** Check compiler, EVM fork, dependency versions, access control and storage-layout assumptions.
+- **Independent validation:** Validate adversarial properties with tests and independent security review before deployment.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

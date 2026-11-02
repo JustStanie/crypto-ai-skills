@@ -324,3 +324,10 @@ const hash = await contract.write.transfer(["0xRecipient...", parseEther("10")],
 - **Mixing Viem v1 and v2 APIs.** Viem v2 changed `publicClient` and `walletClient` creation patterns. Check the version in use.
 - **Not handling chain switching errors.** Users may reject the chain switch or have networks not configured in their wallet.
 - **Forgetting to invalidate queries after writes.** Use `queryClient.invalidateQueries` after a successful write to refresh stale reads.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

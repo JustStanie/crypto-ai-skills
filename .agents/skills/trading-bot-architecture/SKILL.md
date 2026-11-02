@@ -407,3 +407,10 @@ PENDING -> SUBMITTED -> ACKNOWLEDGED -> PARTIALLY_FILLED -> FILLED
 - **Do not assume exchanges are reliable.** Every exchange will go down. Your system must handle this gracefully: cancel orders, preserve state, resume when the exchange returns.
 - **Do not neglect logging.** Log every decision, every order, every fill, every error. When something goes wrong (and it will), logs are your only tool for understanding what happened. Use structured logging (JSON) for machine-parseable analysis.
 - **Do not over-engineer from day one.** Start with a simple, correct system. Add complexity (Kubernetes, Kafka, distributed databases) only when the simple system is proven and the scale demands it.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Trading and execution):** Use venue-specific rules, actual order-book depth, fees, slippage, latency and position limits.
+- **Independent validation:** Separate backtests from live execution; check look-ahead bias, failure recovery, and negative tail scenarios.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

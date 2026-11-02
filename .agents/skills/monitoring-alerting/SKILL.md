@@ -192,3 +192,10 @@ In crypto, every system is a production system 24/7/365. There is no maintenance
 - Never treat on-chain monitoring as optional. Smart contract exploits can drain funds in a single block — minutes of delay in detection mean total loss.
 - Never deploy changes without updating associated dashboards and alerts. Observability is part of the deployment checklist.
 - Never operate without kill switches. The ability to halt everything within seconds is a safety requirement, not a luxury.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

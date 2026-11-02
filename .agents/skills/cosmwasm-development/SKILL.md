@@ -20,7 +20,7 @@ To begin building with CosmWasm, you need the Rust toolchain and several CosmWas
 
 1.  **Install Rust:** If you don't have Rust, install `rustup`.
     ```bash
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     source $HOME/.cargo/env
     ```
 2.  **Add `wasm32-unknown-unknown` target:** This is the compilation target for WebAssembly.
@@ -219,3 +219,10 @@ pub struct GetCountResponse {
 *   **Unbounded Loops or Queries.** Iterating over maps or vectors without limits, especially if their size can grow indefinitely, will inevitably lead to out-of-gas errors or denial-of-service vulnerabilities. Always implement pagination or size limits for iterated operations.
 *   **Lack of Access Control.** Functions that modify critical state or transfer assets without proper sender validation (`info.sender == state.owner` or similar) expose your contract to unauthorized actions. Implement and rigorously test all access control mechanisms.
 *   **Non-deterministic Contract Logic.** Relying on external, non-deterministic factors (like `env.block.time` for critical logic without proper bounds, or floating-point arithmetic) can lead to different results across nodes, breaking consensus and causing state inconsistencies. Ensure all state transitions are purely deterministic.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

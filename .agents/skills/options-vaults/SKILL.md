@@ -23,7 +23,7 @@ Building and interacting with options vaults primarily involves smart contract d
 
     ```bash
     # Install Foundry (if you haven't already)
-    curl -L https://foundry.paradigm.xyz | bash
+    # Security: download the verified official installer, inspect it before executing, and follow the current platform-specific installation guide.
     foundryup
 
     # Create a new Foundry project
@@ -217,3 +217,10 @@ function withdraw(uint256 _shares) external returns (uint256 withdrawnAmount) {
 
 *   **Single Point of Failure Keeper.** Relying on a single, centrally controlled bot to execute the strategy introduces a critical vulnerability. Implement decentralized keeper solutions or require multiple independent keepers to sign off on executions.
 *   **Stale or Manipulated Oracles.** Using outdated or easily manipulable price feeds for strike selection or collateral valuation can lead to significant losses.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (DeFi protocol economics):** Verify collateral parameters, oracle freshness, fees, liquidation and withdrawal constraints.
+- **Independent validation:** Distinguish net yield from nominal rewards; model depeg, hack and liquidity stress.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

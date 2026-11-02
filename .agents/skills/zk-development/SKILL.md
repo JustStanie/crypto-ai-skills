@@ -354,3 +354,10 @@ SP1 and Noir support recursion natively. In circom, use the Groth16 verifier cir
 - **Never build privacy applications without a thorough threat model** — metadata leakage (timing, amounts, interaction patterns) can deanonymize users even with perfect ZK proofs.
 - **Never write ZK circuits without formal specification** — the gap between "what you think the circuit proves" and "what it actually proves" is where all ZK bugs live.
 - **Never rely on security through obscurity for circuit design** — circuits should be open-source and auditable. The security comes from the mathematics, not secrecy.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

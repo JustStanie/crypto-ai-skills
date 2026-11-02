@@ -189,3 +189,10 @@ Your own nodes are your ground truth. Third-party providers are useful for redun
 - Never delay client updates before hard forks. Missing a fork deadline means your node follows a dead chain.
 - Never expose debug/admin RPC namespaces publicly. These methods can leak sensitive data or enable DoS.
 - Never rely on the public mempool for MEV without Flashbots Protect. Your transactions will be sandwiched.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

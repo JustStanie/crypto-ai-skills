@@ -44,3 +44,10 @@ Bitcoin's value proposition rests on verifiability, not trust. Every design deci
 - Running a node on unreliable hardware or network connections, which leads to stale chain tips and incorrect validation.
 - Assuming that transaction privacy is automatic; without deliberate coin control and coinjoin usage, on-chain analysis can cluster most activity.
 - Neglecting to test backup restoration procedures, discovering gaps only when funds are at risk during a real recovery scenario.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

@@ -20,14 +20,14 @@ Before you write any Move code or interact with the Aptos network, you need to s
 
 1.  **Install Rust and Cargo**: Move is built with Rust.
     ```bash
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     source $HOME/.cargo/env
     rustup override set stable # Ensure you're on a stable Rust version
     ```
 
 2.  **Install Aptos CLI**: This is your primary tool for managing accounts, compiling Move, and interacting with the network.
     ```bash
-    curl -fsSL "https://aptos.dev/aptos-cli/install.sh" | bash
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     # Ensure the Aptos CLI is in your PATH. You might need to add:
     # export PATH="$HOME/.aptos/bin:$PATH"
     # source $HOME/.aptos/bin/aptos-bash-autocomplete.sh # For autocompletion
@@ -246,3 +246,10 @@ module <YOUR_ACCOUNT_ADDRESS>::message_board {
 *   **Hardcoded Module Addresses.** Embedding deployer addresses directly in module code instead of using named addresses makes redeployment to different accounts impossible without source modification.
 
 *   **No Event Emission for State Changes.** Modifying global storage without emitting corresponding events makes off-chain indexing and dApp state synchronization impossible, requiring expensive full-state queries.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

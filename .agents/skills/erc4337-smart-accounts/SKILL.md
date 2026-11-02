@@ -279,3 +279,15 @@ async function main() {
 ## Version and Evidence Check
 
 Check the EntryPoint version, bundler support, paymaster API schema, and signer validation on the target chain. Example SDK names and service URLs can become obsolete.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Contract engineering):** Check compiler, EVM fork, dependency versions, access control and storage-layout assumptions.
+- **Independent validation:** Validate adversarial properties with tests and independent security review before deployment.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.
+
+
+## Account abstraction version check (ERC-4337 / EIP-7702)
+
+Do not assume ERC-4337 `UserOperation` code, EntryPoint addresses, bundler RPC methods, paymaster schemas or EIP-7702 authorization flows are interchangeable across versions. Confirm deployed network support, current SDK APIs, simulation failures and paymaster fee behavior using https://ercs.ethereum.org/ERCS/erc-4337 before implementation.

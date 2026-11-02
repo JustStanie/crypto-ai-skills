@@ -28,7 +28,7 @@ Establishing your MEV infrastructure involves setting up high-performance nodes,
 2.  **Development Toolkit:** Use `foundry` for rapid smart contract development, testing, and script execution.
     ```bash
     # Install Foundry
-    curl -L https://foundry.paradigm.xyz | bash
+    # Security: download the verified official installer, inspect it before executing, and follow the current platform-specific installation guide.
     foundryup
     ```
 
@@ -236,3 +236,10 @@ async function calculateOptimalFees(provider: providers.JsonRpcProvider) {
 *   **No Bundle Simulation Before Submission.** Submitting MEV bundles without pre-flight simulation wastes gas on reverted transactions and exposes strategy logic to competitors through failed on-chain attempts.
 
 *   **Ignoring Bundle Atomicity Requirements.** Constructing multi-transaction MEV strategies without ensuring atomic execution allows partial execution where only the unprofitable legs succeed, resulting in losses.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

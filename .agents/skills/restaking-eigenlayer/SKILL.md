@@ -22,7 +22,7 @@ To build effectively with EigenLayer, you need a robust development environment 
     You'll primarily use a Solidity development framework like Foundry or Hardhat.
     For Foundry:
     ```bash
-    curl -L https://foundry.paradigm.xyz | bash
+    # Security: download the verified official installer, inspect it before executing, and follow the current platform-specific installation guide.
     foundryup
     # Initialize a new project
     forge init my-eigenlayer-project
@@ -238,3 +238,10 @@ setInterval(runOracleService, 60 * 1000); // Every minute
 ## Anti-Patterns
 
 *   **Vague Slashing Conditions.** You define
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (DeFi protocol economics):** Verify collateral parameters, oracle freshness, fees, liquidation and withdrawal constraints.
+- **Independent validation:** Distinguish net yield from nominal rewards; model depeg, hack and liquidity stress.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

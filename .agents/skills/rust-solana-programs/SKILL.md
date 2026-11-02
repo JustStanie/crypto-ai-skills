@@ -21,7 +21,7 @@ To start building Solana programs, you'll need the Rust toolchain, the Solana CL
 1.  **Install Rust:**
     If you don't have Rust installed, use `rustup`.
     ```bash
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     source $HOME/.cargo/env
     rustup update stable
     ```
@@ -241,3 +241,10 @@ if data == 0 {
 *   **Lack of Rent Exemption/Closing.** Creating accounts without providing a mechanism to close them and reclaim rent. This burdens users with perpetual rent payments for unused state. Always provide a `close` instruction (e.g., `#[account(close = receiver)]`) for temporary or user-owned accounts.
 *   **Predictable PDAs without Unique Seeds.** Relying solely on a base pubkey (like the initializer's key) for PDA derivation when multiple instances are expected. This can lead to PDA collisions or make it difficult to manage multiple states for a single user. Always use unique, descriptive seeds for different instances of PDAs to ensure distinctness and enhance security.
 *   **Direct Raw Data Deserialization.** Manually deserializing raw account data
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

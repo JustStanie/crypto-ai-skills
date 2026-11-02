@@ -24,7 +24,7 @@ To build and execute launchpad strategies, you need a robust development environ
     ```bash
     # Install Node.js (if not already installed)
     # Using nvm is recommended for managing Node.js versions
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     nvm install 18
     nvm use 18
     ```
@@ -49,7 +49,7 @@ To build and execute launchpad strategies, you need a robust development environ
     ```
     ```bash
     # Foundry setup (if you prefer Rust/Solidity scripting)
-    curl -L https://foundry.paradigm.xyz | bash
+    # Security: download the verified official installer, inspect it before executing, and follow the current platform-specific installation guide.
     foundryup
     forge init my-launchpad-project
     ```
@@ -250,3 +250,10 @@ async function simulateBuy() {
 
 *   **Blindly Sending Max Gas.** You configure `gasPrice` or `maxFeePerGas` to an arbitrarily high value, hoping to get included. This often results in overpaying significantly, wasting capital, and potentially still failing if the network is extremely congested and your `maxFeePerGas` isn't truly high enough or if the transaction reverts. *Instead, dynamically estimate gas using `provider.getFeeData()` and add a reasonable buffer, or use `maxPriorityFeePerGas` strategically.*
 *   **Not Validating Transaction Success.** You send a transaction and assume it went through successfully if no immediate error
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Trading and execution):** Use venue-specific rules, actual order-book depth, fees, slippage, latency and position limits.
+- **Independent validation:** Separate backtests from live execution; check look-ahead bias, failure recovery, and negative tail scenarios.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

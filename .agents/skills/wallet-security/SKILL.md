@@ -103,3 +103,10 @@ The seed phrase (BIP-39 mnemonic) is the master secret from which all private ke
 - Do not assume hardware wallets are infallible. They have had vulnerabilities (Ledger's JTAG debug port, Trezor's voltage glitching attack). Keep firmware updated and understand the residual risks.
 - Do not give unlimited token approvals if you can avoid it. If you must, revoke promptly after use.
 - Do not neglect operational security for convenience. The few seconds saved by skipping verification have cost people millions.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Custody and security):** Treat bridge, authorization, signing, key handling and replay risk as potentially loss-causing.
+- **Independent validation:** Avoid secrets in examples; validate controls, testnets, incident procedures and third-party contracts.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

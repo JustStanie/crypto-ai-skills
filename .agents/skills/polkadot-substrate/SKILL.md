@@ -21,7 +21,7 @@ To begin developing with Substrate, you need the Rust toolchain and the `substra
 1.  **Install Rust:** Substrate development requires a `nightly` Rust toolchain.
     ```bash
     # Install rustup if you don't have it
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     source $HOME/.cargo/env
     
     # Add the nightly toolchain and set it as default for your project
@@ -260,3 +260,10 @@ XCM is the language for cross-chain communication in Polkadot. It allows paracha
 *   **Sudo-Only Governance Long-Term.** Maintaining sudo access as the primary governance mechanism beyond the initial bootstrap phase centralizes control and undermines the decentralization properties that Substrate-based chains should provide.
 
 *   **Tight Coupling Between Pallets.** Building pallets with direct dependencies on other pallets' storage or internal functions instead of using trait-based interfaces prevents modular composition and makes runtime upgrades fragile.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

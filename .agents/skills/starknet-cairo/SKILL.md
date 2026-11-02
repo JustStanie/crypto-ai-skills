@@ -20,7 +20,7 @@ You'll need `Scarb` for Cairo project management and `Starkli` for interacting w
 
 1.  **Install Scarb (Cairo build tool):**
     ```bash
-    curl --proto '=https' --tlsv1.2 -sSf https://docs.swmansion.com/scarb/install.sh | sh
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     ```
     Verify installation:
     ```bash
@@ -29,7 +29,7 @@ You'll need `Scarb` for Cairo project management and `Starkli` for interacting w
 
 2.  **Install Starkli (Starknet CLI):**
     ```bash
-    curl -L https://starkli.rs/install.sh | sh
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     ```
     Verify installation:
     ```bash
@@ -254,3 +254,10 @@ mod tests {
 *   **Lack of Proper Testing.** Relying solely on `starkli` for testing is insufficient. Without unit tests (`snforge`) and integration tests (`starknet.py`), critical bugs will slip through.
 *   **Blindly Optimizing.** Don't pre-optimize for proof size or performance before you have a working, correct, and secure contract. Profile and then optimize targeted hot paths.
 *   **Misunderstanding Transaction Fees.** Fees on Starknet are paid in ETH or STRK, but calculated based on Cairo steps and L1 data availability costs. Don't assume EVM gas models directly translate.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

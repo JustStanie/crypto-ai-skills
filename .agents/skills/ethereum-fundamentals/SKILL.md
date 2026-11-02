@@ -44,3 +44,10 @@ Ethereum is a world computer whose primary innovation is credibly neutral, permi
 - Treating gas optimization as a post-deployment concern rather than an architectural decision baked into storage layout and function design.
 - Ignoring MEV exposure in contract design, allowing sandwich attacks and frontrunning on operations that could be protected with commit-reveal or private mempools.
 - Conflating Ethereum the protocol with Ethereum the token price; protocol health metrics like validator count, client diversity, and finality rates matter more than market cap.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

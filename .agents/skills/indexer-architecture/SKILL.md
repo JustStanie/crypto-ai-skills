@@ -278,3 +278,10 @@ Reorgs mean a block previously thought final is replaced. Your indexer must dete
 *   **No Idempotent Writes.** Inserting indexed data without ON CONFLICT or upsert logic causes duplicate entries during re-indexing or reorg recovery, corrupting downstream data.
 
 *   **Archive Node Queries in Hot Paths.** Querying archive nodes for historical data on every user request instead of caching results aggressively creates latency spikes and excessive RPC costs.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

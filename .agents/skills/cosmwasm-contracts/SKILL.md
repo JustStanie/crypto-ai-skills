@@ -18,7 +18,7 @@ Developing CosmWasm contracts requires a Rust development environment and a few 
 
 1.  **Install Rust:** If you don't have Rust, install `rustup`.
     ```bash
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     ```
     Follow the on-screen instructions, typically choosing the default installation.
 2.  **Add `wasm32-unknown-unknown` target:** This target allows Rust to compile to WebAssembly.
@@ -289,3 +289,10 @@ mod tests {
 *   **Upgradeability Strategy:** Plan for contract upgrades from the start. Implement an `admin` pattern and a `migrate` entry point to enable future code changes and data migrations.
 *   **Security Audits:** Treat security as paramount. Engage with professional auditors and follow community best practices for smart contract security.
 *   **Clear Event Logging:** Use `Response::add_attribute` to emit meaningful events for off-chain indexing and user interfaces.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

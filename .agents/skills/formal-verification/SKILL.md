@@ -177,3 +177,10 @@ KEVM is primarily used for verifying core infrastructure (the EVM itself, critic
 - Do not attempt full formal verification of an entire DeFi protocol without significant experience. Start with the most critical invariants (solvency, access control, conservation) and expand from there.
 - Do not assume that because a property verified for one version of the code, it still holds after modifications. Re-run verification after every code change.
 - Do not skip the learning curve. Formal verification requires genuine mathematical reasoning skill. Investing in training pays dividends across every project.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Contract engineering):** Check compiler, EVM fork, dependency versions, access control and storage-layout assumptions.
+- **Independent validation:** Validate adversarial properties with tests and independent security review before deployment.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

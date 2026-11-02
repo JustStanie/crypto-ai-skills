@@ -246,3 +246,10 @@ Full stack for a production searcher:
 ## Version and Evidence Check
 
 Treat inclusion probability, profitability, transaction ordering and auction access as contingent. Simulate against current state and avoid presenting bundles as guaranteed execution.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Trading and execution):** Use venue-specific rules, actual order-book depth, fees, slippage, latency and position limits.
+- **Independent validation:** Separate backtests from live execution; check look-ahead bias, failure recovery, and negative tail scenarios.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

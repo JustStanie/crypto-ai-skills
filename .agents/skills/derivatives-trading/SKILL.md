@@ -164,7 +164,7 @@ The standard Black-Scholes model assumes:
 - Build a systematic strategy that harvests funding rates across 20+ perpetual contracts.
 - Weight allocation by: funding rate magnitude, funding rate stability, liquidity.
 - Delta-hedge each position with spot (cash-and-carry).
-- Expected Sharpe: 2-4 in favorable environments. Drawdowns occur when funding rates flip negative market-wide (bear markets).
+- Sharpe ratio: scenario-dependent and not reliably forecastable without a robust, fee-adjusted backtest. Drawdowns can occur when funding rates flip negative; market-wide (bear markets).
 
 ### Cross-Venue Greeks Management
 
@@ -196,3 +196,10 @@ When trading options on Deribit and hedging with futures on Binance:
 - **Do not trade options without understanding all Greeks.** Buying a call is not just a directional bet. It is also a bet on volatility, time, and skew.
 - **Do not forget about exercise/settlement mechanics.** Deribit options are European-style, cash-settled. DeFi options may have different mechanics. Know what happens at expiry.
 - **Do not ignore liquidity in options.** The bid-ask spread on illiquid options can be 5-20% of the option price. Your edge can be entirely consumed by the spread.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Trading and execution):** Use venue-specific rules, actual order-book depth, fees, slippage, latency and position limits.
+- **Independent validation:** Separate backtests from live execution; check look-ahead bias, failure recovery, and negative tail scenarios.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

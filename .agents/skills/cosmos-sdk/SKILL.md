@@ -281,3 +281,10 @@ createPost().catch(console.error);
 ## Version and Evidence Check
 
 Cosmos SDK, CometBFT, IBC and Ignite version compatibility and module APIs vary significantly. Verify each command and generated scaffold against current official docs; pin compatible releases.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

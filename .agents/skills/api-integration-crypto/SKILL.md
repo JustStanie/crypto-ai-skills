@@ -214,3 +214,10 @@ Each exchange has unique rate limit structures:
 - Never poll REST APIs at high frequency when a WebSocket alternative exists. REST polling wastes rate limit budget and increases latency.
 - Never log API secrets, even in debug mode. Sanitize all log output to redact keys, secrets, and sensitive headers.
 - Never treat exchange documentation as definitive. Test behavior empirically. Many exchanges have undocumented behaviors, rate limits, and quirks.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

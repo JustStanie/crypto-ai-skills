@@ -44,3 +44,10 @@ Good crypto research starts with the assumption that most projects will fail and
 - Dismissing regulatory risk as irrelevant because crypto is decentralized, when in reality most projects have centralized teams, identifiable treasuries, and operations in specific jurisdictions.
 - Anchoring to historical prices or previous cycle patterns as predictive of future performance, ignoring that each cycle has different macro conditions, participants, and narrative drivers.
 - Conducting research only before buying and never revisiting the thesis after, missing deterioration signals that should trigger position reduction or exit.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

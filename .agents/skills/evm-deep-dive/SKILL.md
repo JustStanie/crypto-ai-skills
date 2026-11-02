@@ -216,3 +216,10 @@ TSTORE (0x5d) and TLOAD (0x5c) provide transaction-scoped storage at dramaticall
 - **Never forget to update the free memory pointer** when allocating memory in assembly — Solidity code after your assembly block will overwrite your data.
 - **Never ignore the quadratic memory expansion cost** — allocating 1MB of memory costs approximately 3 billion gas.
 - **Never hardcode gas amounts in CALL** — forward all available gas with `gas()` unless you have a specific reason to limit it.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

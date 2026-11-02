@@ -145,7 +145,7 @@ Crypto operates in distinct regimes that require different allocation strategies
 
 Define crypto sectors and allocate across them:
 
-- **Store of Value (BTC):** 30-50% allocation. Lowest volatility, highest liquidity.
+- **Bitcoin (BTC):** No universal allocation applies. Size exposure according to risk tolerance, liquidity needs, concentration limits and measured market volatility; BTC can experience severe drawdowns.
 - **Smart Contract Platforms (ETH, SOL, AVAX):** 20-30%. High growth potential, platform risk.
 - **DeFi (UNI, AAVE, MKR, CRV):** 10-20%. Revenue-generating, but token value accrual varies.
 - **Layer 2 (ARB, OP, STRK):** 5-15%. Growth driven by Ethereum scaling narrative.
@@ -218,3 +218,10 @@ For taxable investors:
 - **Do not chase yield without understanding the risk.** A 200% APY DeFi farm is not free money. The yield comes from somewhere (token inflation, impermanent loss, smart contract risk). Model the risk before allocating.
 - **Do not confuse market-cap weighting with diversification.** A market-cap weighted crypto portfolio is 60%+ BTC and ETH. That is a concentrated bet on two assets, not diversification.
 - **Do not backtest portfolio strategies without accounting for token creation and death.** Many tokens in the top 50 today did not exist 3 years ago. Backtest with the actual universe that was available at each point in time to avoid survivorship bias.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Trading and execution):** Use venue-specific rules, actual order-book depth, fees, slippage, latency and position limits.
+- **Independent validation:** Separate backtests from live execution; check look-ahead bias, failure recovery, and negative tail scenarios.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

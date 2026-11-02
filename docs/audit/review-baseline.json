@@ -1,0 +1,728 @@
+{
+  "schema_version": 1,
+  "description": "Historical static review evidence. Edit entries only after real human/expert review. Never auto-approve a changed Skill.",
+  "source": "docs/audit/HISTORICAL_TECHNICAL_AUDIT.md",
+  "original_review_date": "2026-10-31",
+  "reviews": {
+    "account-abstraction": {
+      "reviewed_sha256": "1588e213984ada20ed2528bd0f727b1013309f778f19a21b4a76044784ea087b",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `credential-security (6; L13, L30)`, `third-party-api (14; L19, L26)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `deece8a33182` → `1588e213984a` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "airdrop-farming": {
+      "reviewed_sha256": "44887e08e9ef47400fb5343c46c5d78b7dbe02c39361ec69081d5364819340e1",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `credential-security (4; L352, L352)`, `legal-or-compliance (3; L584, L690)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `1d976a1644b1` → `44887e08e9ef` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "algorithmic-execution": {
+      "reviewed_sha256": "58896f8e8f63be7f9531f7d132d2dd1cd0003ebf2fc275a2cabb4adb0d5df0a9",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Trading and execution.\n- **Review signals:** `credential-security (1; L186)`, `third-party-api (14; L4, L34)`, `financial-assumptions (3; L303, L305)`\n- **Edits:** Added subject-specific validation for trading and execution (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `dd76fa4aae22` → `58896f8e8f63` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "amm-mechanics": {
+      "reviewed_sha256": "27bb22dd854eb74e8fe7cca20a85ad7406826887d15bb73a077019795c90d169",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** DeFi protocol economics.\n- **Review signals:** `third-party-api (4; L24, L155)`, `live-data (1; L108)`\n- **Edits:** Added subject-specific validation for defi protocol economics (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `ca7cb30f209f` → `27bb22dd854e` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "anchor-programs": {
+      "reviewed_sha256": "3ab5a73be29840f335de6b1e640f9d33492132fa58f89d677db322883594d37b",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unguarded-install (1; L23)`, `third-party-api (1; L15)`, `live-data (1; L15)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `9f511d2d427e` → `3ab5a73be298` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "api-integration-crypto": {
+      "reviewed_sha256": "51ee8430f5bc4880a844139b059d38137bf4a14839fbd430880a19dbfbe4fac3",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `hardcoded-exchange-limits (4; L37, L39)`, `credential-security (12; L71, L110)`, `third-party-api (48; L2, L3)`, `legal-or-compliance (5; L36, L37)`, `live-data (6; L49, L89)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `38f9d9c8632f` → `51ee8430f5bc` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "aptos-development": {
+      "reviewed_sha256": "a08b1cd64a911b331bd211efa47af8fc19bc78804bdecaffb0ea4e9a07256fab",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unguarded-install (2; L23, L30)`, `credential-security (1; L165)`, `third-party-api (6; L25, L131)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `fd4ac092e038` → `a08b1cd64a91` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "avalanche-development": {
+      "reviewed_sha256": "71d3933538d0c44da76324a4a13ef3d35197b1cd66131e74c242426d332c2af6",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unguarded-install (1; L36)`, `credential-security (4; L175, L181)`, `third-party-api (10; L32, L41)`\n- **Edits:** Replaced 1 remote curl-to-shell installation example(s) with safer official-install verification guidance. Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `dddd567975f4` → `71d3933538d0` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "base-development": {
+      "reviewed_sha256": "5d55dabc3cb3b2783a82ecd1a417d34a7ad4b52fc1de27e904d027327c76925b",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unguarded-install (1; L26)`, `credential-security (3; L183, L241)`, `third-party-api (2; L37, L91)`\n- **Edits:** Replaced 1 remote curl-to-shell installation example(s) with safer official-install verification guidance. Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `7182ca759850` → `5d55dabc3cb3` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "bitcoin-fundamentals": {
+      "reviewed_sha256": "c931668411aed17f0833f6995c00d948d0ca4d86e50eb7c91ffaca0b22310109",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `third-party-api (1; L28)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `ae2133dfbd22` → `c931668411ae` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "blockchain-forensics": {
+      "reviewed_sha256": "34e56f2f4f7dbcf6f2ce5dee6a09f5333e4b3f98bf2f4d78cc29f828c323a0c9",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Custody and security.\n- **Review signals:** `credential-security (1; L24)`, `third-party-api (3; L39, L63)`, `legal-or-compliance (12; L9, L9)`, `live-data (2; L63, L93)`\n- **Edits:** Added subject-specific validation for custody and security (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `3f3272f1f133` → `34e56f2f4f7d` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "blockchain-indexing-data": {
+      "reviewed_sha256": "432d6bfe494182d22144a393c70b9a6a6dc540859c24a3ed55c210567916f2a8",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `third-party-api (3; L126, L254)`, `live-data (2; L9, L13)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `447dd6cd949e` → `432d6bfe4941` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "cairo-contracts": {
+      "reviewed_sha256": "1c6a6319b174cd4db7740f50eaaccd3d843f1f955fb5509d8844ba3481f51bc7",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unguarded-install (3; L21, L41)`, `third-party-api (5; L25, L30)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `df4d5ce34d6a` → `1c6a6319b174` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "chainlink-oracles": {
+      "reviewed_sha256": "0f0eb5607c670a0fd054a5b385a02316cce9add0ed03d9039f5b5bfcac704746",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Custody and security.\n- **Review signals:** `unguarded-install (1; L24)`, `third-party-api (4; L28, L39)`, `live-data (2; L15, L51)`\n- **Edits:** Corrected an unsupported or overly categorical statement (5 occurrence(s)). Replaced 1 remote curl-to-shell installation example(s) with safer official-install verification guidance. Added subject-specific validation for custody and security (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `2ff48b0d9c2f` → `0f0eb5607c67` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "cold-storage-security": {
+      "reviewed_sha256": "32dbfede339d60bc114aed9e6b92f0b95aefa7ad9c0e475deef712e64616beb0",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Custody and security.\n- **Review signals:** `unqualified-performance (1; L44)`, `credential-security (7; L17, L19)`\n- **Edits:** Added subject-specific validation for custody and security (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `aacf304fd2ec` → `32dbfede339d` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "cosmos-sdk": {
+      "reviewed_sha256": "186aa7bb1878d5ff14add00547ad64adaba63566aa7924eaa34cf12fb20fd01d",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `third-party-api (36; L2, L3)`, `financial-assumptions (2; L196, L204)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `8167f02368c6` → `186aa7bb1878` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "cosmwasm-contracts": {
+      "reviewed_sha256": "25b442cbe754b6077a98087f7feca987e07690e16c5312b62103b50475c94435",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unguarded-install (1; L21)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `44b155de79dd` → `25b442cbe754` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "cosmwasm-development": {
+      "reviewed_sha256": "0c8237079ded96208070f9f39f213693b7281bf990e2b28028a7cf41cde02558",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unguarded-install (1; L23)`, `third-party-api (3; L13, L34)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `3d26c25d9246` → `0c8237079ded` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "cross-chain-bridges": {
+      "reviewed_sha256": "ce42c2c559c20b3efeb15424e329ba46ec3c53e4fc5106b2de3d9bc6a266d786",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Custody and security.\n- **Review signals:** `credential-security (1; L137)`, `third-party-api (2; L63, L90)`\n- **Edits:** Added subject-specific validation for custody and security (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `8953fa7dca9e` → `ce42c2c559c2` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "cross-chain-defi": {
+      "reviewed_sha256": "ab1b2a6c987f3439f65dc5d72e82a4be82522512d85553618bbcfc81a677ab82",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** DeFi protocol economics.\n- **Review signals:** `unguarded-install (1; L27)`, `credential-security (1; L34)`, `third-party-api (10; L24, L30)`\n- **Edits:** Added subject-specific validation for defi protocol economics (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `b4ebf7388b09` → `ab1b2a6c987f` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "crypto-compliance": {
+      "reviewed_sha256": "280492cc5d0ca568f17a46e55567e087fec5d39938374ee8a938699bfd7bdfcb",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Regulated crypto activity.\n- **Review signals:** `absolute-percent-benchmark (1; L58)`, `credential-security (1; L13)`, `third-party-api (1; L204)`, `legal-or-compliance (36; L2, L3)`, `live-data (1; L189)`\n- **Edits:** Added subject-specific validation for regulated crypto activity (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `123df0f9f925` → `280492cc5d0c` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "crypto-fund-operations": {
+      "reviewed_sha256": "a1bae526a964d422cb395128bc0df8a40fbb6dfbed01528f97d3439a8b014646",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Regulated crypto activity.\n- **Review signals:** `absolute-percent-benchmark (2; L110, L115)`, `financial-assumptions (4; L75, L79)`, `legal-or-compliance (26; L9, L13)`, `live-data (2; L52, L90)`\n- **Edits:** Added subject-specific validation for regulated crypto activity (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `3dbaf60aede0` → `a1bae526a964` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "crypto-research": {
+      "reviewed_sha256": "1c9a6e4e5d269b2acaf1092aa0f670a898f30d647ac6b7ae66d047f98fe8e38e",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** No automated risk patterns matched; reviewed for subject-scope limits.\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `0655c57aeb74` → `1c9a6e4e5d26` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "crypto-tax": {
+      "reviewed_sha256": "5b582336687e8b28c9403931c634aa76f4b9739508fd54ba446ea97afb889577",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Regulated crypto activity.\n- **Review signals:** `third-party-api (2; L28, L48)`, `legal-or-compliance (20; L2, L3)`\n- **Edits:** Added subject-specific validation for regulated crypto activity (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `8ca645091d3b` → `5b582336687e` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "cryptocurrency-stablecoin-mechanics": {
+      "reviewed_sha256": "18e687be14d2ca8538f91e328fbb4d739abe6a3b9f4ed116a9cb2dfe26a83cce",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** DeFi protocol economics.\n- **Review signals:** No automated risk patterns matched; reviewed for subject-scope limits.\n- **Edits:** Added subject-specific validation for defi protocol economics (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `34eb4698577b` → `18e687be14d2` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "dao-governance": {
+      "reviewed_sha256": "0adbc5c27a7e7d45d4e08298c9e94a1c6217a189b68ccd14b698eecea122ac1d",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `legal-or-compliance (1; L45)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `36a54ae5c5d2` → `0adbc5c27a7e` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "dao-governance-contracts": {
+      "reviewed_sha256": "fb6faf52c334aaaebb19a16e85083151620ef30089a891a8d19aaed4199ce7cf",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `third-party-api (3; L33, L36)`\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `384f293ed583` → `fb6faf52c334` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "data-pipeline-crypto": {
+      "reviewed_sha256": "f9b12b57d446d354aa8117ad108ecb5433064ef1dbd755f20e826311a7005651",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `third-party-api (6; L13, L29)`, `legal-or-compliance (2; L64, L70)`, `live-data (7; L17, L68)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `d02c126d9803` → `f9b12b57d446` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "defi-composability": {
+      "reviewed_sha256": "0731d740eca7cd7bb7a2407973fbb7700d5194269ec484a28cdcac0ccfdd7100",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** DeFi protocol economics.\n- **Review signals:** `third-party-api (3; L97, L153)`, `financial-assumptions (1; L42)`\n- **Edits:** Added subject-specific validation for defi protocol economics (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `89777e228f29` → `0731d740eca7` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "defi-exploit-prevention": {
+      "reviewed_sha256": "f4fafcc9d602fa66899b0ffb58d07c77dc4e2632451a4fb6929e1a915c31ea4e",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Custody and security.\n- **Review signals:** `legal-or-compliance (1; L13)`\n- **Edits:** Added subject-specific validation for custody and security (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `6c5f53770732` → `f4fafcc9d602` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "defi-protocol-development": {
+      "reviewed_sha256": "355376abb2be4304e277252594c0773024d4407678ea1fa63ab0c544d2af5b6f",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `absolute-percent-benchmark (1; L98)`\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `8ea379fbc477` → `355376abb2be` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "defi-risk-assessment": {
+      "reviewed_sha256": "2bd54d87b6c56a6b072387773bceb579c6720fcce4fda37068595a8f18276e85",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** DeFi protocol economics.\n- **Review signals:** `absolute-percent-benchmark (3; L25, L143)`, `third-party-api (1; L75)`, `financial-assumptions (1; L112)`\n- **Edits:** Added subject-specific validation for defi protocol economics (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `ed7fa963716a` → `2bd54d87b6c5` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "defi-yield-strategies": {
+      "reviewed_sha256": "1535e262a8706732ad1861e96a663aa5b4f39f12d6cff2a7d29688c1a2c2a4ea",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** DeFi protocol economics.\n- **Review signals:** No automated risk patterns matched; reviewed for subject-scope limits.\n- **Edits:** Added subject-specific validation for defi protocol economics (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `5a6f1c547680` → `1535e262a870` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "derivatives-trading": {
+      "reviewed_sha256": "986d538fc7b9c598cc8eba6f9519260fb91396af565b706c0bade8fe8f234575",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Trading and execution.\n- **Review signals:** `absolute-percent-benchmark (2; L33, L111)`, `unqualified-performance (1; L167)`, `financial-assumptions (1; L167)`\n- **Edits:** Corrected an unsupported or overly categorical statement (1 occurrence(s)). Added subject-specific validation for trading and execution (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `e79503878561` → `986d538fc7b9` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "diamond-pattern": {
+      "reviewed_sha256": "0d630e329874bfedb53ff7287300a3163df4dd2521bdb9e258b06acc648f5e6a",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `third-party-api (6; L23, L24)`\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `ba8c13c762ce` → `0d630e329874` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "erc1155-multi-token": {
+      "reviewed_sha256": "97165d731c73ecd95c8bfbe135bf222cb0ea545709e64d499320d35809a5b310",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `unguarded-install (1; L23)`, `third-party-api (8; L34, L36)`\n- **Edits:** Reviewed expected issue; phrase not present, left original unchanged. Replaced 1 remote curl-to-shell installation example(s) with safer official-install verification guidance. Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `3d672cc81da9` → `97165d731c73` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "erc4337-smart-accounts": {
+      "reviewed_sha256": "a7d62a654b1a19a16fde2a06f67a94a7c3bb6958da83849ac40cafee1f4afaed",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `credential-security (5; L13, L35)`, `third-party-api (10; L19, L24)`\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `d43c6382d088` → `a7d62a654b1a` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "erc721-nft-contracts": {
+      "reviewed_sha256": "0b98985e2e33c8c5edba8668242308e75993c5ae6a186355240ab705253d0427",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `credential-security (1; L53)`, `third-party-api (2; L24, L39)`\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `e706b6846bbd` → `0b98985e2e33` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "ethereum-fundamentals": {
+      "reviewed_sha256": "b65f849e49eda091da1d7590474a6f1d81c51b28178b829c6bf06897181b1818",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `third-party-api (1; L22)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `202afb053e87` → `b65f849e49ed` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "ethers-js": {
+      "reviewed_sha256": "a01981c48b2930f270ea41a27197a7c1f4bc2f40a201b858ca1c4a3e8ccd635c",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unqualified-performance (1; L224)`, `credential-security (1; L62)`, `third-party-api (4; L13, L13)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `b16677acbb52` → `a01981c48b29` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "evm-deep-dive": {
+      "reviewed_sha256": "b80e2fd9daac1b50379f1fec9e8554169587512237c77c53daac332d768291f0",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** No automated risk patterns matched; reviewed for subject-scope limits.\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `f96ddeb129b9` → `b80e2fd9daac` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "exchange-infrastructure": {
+      "reviewed_sha256": "e41503474cdc57475574645e6c86f54624e6b7bacc9b487ba7aaf50832999b9d",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `absolute-percent-benchmark (1; L51)`, `credential-security (1; L164)`, `third-party-api (6; L96, L98)`, `financial-assumptions (1; L139)`, `live-data (3; L88, L134)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `9b65d9b427f7` → `e41503474cdc` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "exploit-analysis": {
+      "reviewed_sha256": "9911408287ed5fefe011e4d5421244c1a3ef5d0c34c9215dff7848580bd2806d",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Custody and security.\n- **Review signals:** `credential-security (1; L45)`\n- **Edits:** Added subject-specific validation for custody and security (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `6c34dd5a5e9b` → `9911408287ed` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "flash-loan-attack-defense": {
+      "reviewed_sha256": "fd5fb04ae995aa3dccf72e66dc726152d3fcf38cfdf62fc880bcdef14325649b",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `unguarded-install (1; L24)`, `third-party-api (6; L28, L33)`\n- **Edits:** Replaced 1 remote curl-to-shell installation example(s) with safer official-install verification guidance. Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `0cf2cd1019f9` → `fd5fb04ae995` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "formal-verification": {
+      "reviewed_sha256": "61b7ada100a372423ef4f6e9f7b3b632d339dc7868a1e24b81a470f3f5d88100",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `third-party-api (2; L24, L178)`\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `9c693db3990e` → `61b7ada100a3` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "foundry-framework": {
+      "reviewed_sha256": "b803c4d1a2bf2cbde4d908a49defd3026b8040a5dc6ba09eff9c07618392dcf9",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `unguarded-install (1; L37)`, `credential-security (1; L398)`, `third-party-api (6; L45, L46)`\n- **Edits:** Replaced 1 remote curl-to-shell installation example(s) with safer official-install verification guidance. Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `27be2accf64c` → `b803c4d1a2bf` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "gas-optimization-security": {
+      "reviewed_sha256": "fbc4338dbe2e3e26c9c03bce9e5c92ad0580284faa02f4756dad573410ecad79",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** No automated risk patterns matched; reviewed for subject-scope limits.\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `7b179bff0118` → `fbc4338dbe2e` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "governance-dao": {
+      "reviewed_sha256": "7720a961bf2a07b9f56f2b622216191fd145bf67595680da8f8fe0d5c86dc0c9",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `absolute-percent-benchmark (1; L38)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `808146fb817f` → `7720a961bf2a` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "hardhat-development": {
+      "reviewed_sha256": "09249295642182f265642a49b329be249661151a73c2fc8e8c8ceb0b2c58fec2",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `credential-security (1; L27)`, `third-party-api (5; L27, L40)`\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `fe9d491d04e2` → `092492956421` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "high-frequency-trading": {
+      "reviewed_sha256": "dffcfe84104a56e046b7f0179c0e1f3f1bd51ffe31586510b9556288368ac1b7",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Trading and execution.\n- **Review signals:** `hardcoded-exchange-limits (2; L37, L43)`, `third-party-api (7; L13, L21)`, `legal-or-compliance (1; L34)`, `live-data (2; L91, L212)`\n- **Edits:** Added subject-specific validation for trading and execution (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `af23e50280c3` → `dffcfe84104a` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "incident-response-crypto": {
+      "reviewed_sha256": "33958dcf8d4c7cafd0c4a3f9f49a0edeeb767f95e5ce7138f33820947206cdbe",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Custody and security.\n- **Review signals:** `absolute-percent-benchmark (1; L112)`, `credential-security (2; L44, L44)`, `third-party-api (1; L44)`, `legal-or-compliance (8; L64, L78)`\n- **Edits:** Added subject-specific validation for custody and security (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `cf9258b419c8` → `33958dcf8d4c` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "indexer-architecture": {
+      "reviewed_sha256": "ba7c333fe1672190025aed3fe520e3a647594f4e8d2f0882d1e0fe8752dd994c",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `third-party-api (1; L28)`, `live-data (2; L134, L139)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `ab22f22e086a` → `ba7c333fe167` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "intent-based-trading": {
+      "reviewed_sha256": "be639e5ab7af51dfe03e570e03b0487c647f2d3bfff793c28c32abf20363f736",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Trading and execution.\n- **Review signals:** `unguarded-install (1; L25)`, `third-party-api (9; L29, L36)`\n- **Edits:** Replaced 1 remote curl-to-shell installation example(s) with safer official-install verification guidance. Added subject-specific validation for trading and execution (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `6366ed208adb` → `be639e5ab7af` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "ipfs-storage": {
+      "reviewed_sha256": "f4841cb478c9567aa19372a0529519b131cd110a37af597625a627bce8b22fdc",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `third-party-api (3; L23, L42)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `f0e615036633` → `f4841cb478c9` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "launchpad-strategies": {
+      "reviewed_sha256": "ecaa38c8b4d1c95c65f1cc80faa0747dede80fe17adb560144099f147fd76ee3",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Trading and execution.\n- **Review signals:** `unguarded-install (2; L27, L52)`, `credential-security (3; L38, L243)`, `third-party-api (5; L34, L36)`\n- **Edits:** Replaced 1 remote curl-to-shell installation example(s) with safer official-install verification guidance. Added subject-specific validation for trading and execution (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `2c4635ace548` → `ecaa38c8b4d1` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "layer-2-scaling": {
+      "reviewed_sha256": "1ebd863f0dbcc60cc3e4021f95efedbcd9e226de321f7b1afe2b055a27801697",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unqualified-performance (1; L46)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `0ff0295607ab` → `1ebd863f0dbc` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "lending-borrowing": {
+      "reviewed_sha256": "2899aa0c4c572ac27451de359dbd53c8949a898a6ddd23ffafe0d5c37be20d40",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** DeFi protocol economics.\n- **Review signals:** `absolute-percent-benchmark (6; L61, L69)`, `financial-assumptions (16; L35, L52)`, `legal-or-compliance (2; L162, L163)`\n- **Edits:** Added subject-specific validation for defi protocol economics (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `48c7e09dc0f3` → `2899aa0c4c57` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "lightning-network-development": {
+      "reviewed_sha256": "344a5fc0ae8d4334e379e8799c6965db017ecaede7b5141caa5e007b61171888",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `third-party-api (7; L117, L117)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `0e8caf7a6dad` → `344a5fc0ae8d` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "liquid-staking": {
+      "reviewed_sha256": "a39769e0e501f3f6145d7a4be4e44b10dc2005b1c10a3ee3c38e9af308c1fd92",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** DeFi protocol economics.\n- **Review signals:** `absolute-percent-benchmark (3; L41, L51)`, `third-party-api (1; L59)`, `financial-assumptions (7; L94, L95)`, `legal-or-compliance (2; L78, L229)`\n- **Edits:** Added subject-specific validation for defi protocol economics (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `d0d74fd58fea` → `a39769e0e501` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "market-data-analysis": {
+      "reviewed_sha256": "0de771cee95e09aac7268a440771547874f607ededfdd7aff38fd05c13a0d3d5",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Trading and execution.\n- **Review signals:** No automated risk patterns matched; reviewed for subject-scope limits.\n- **Edits:** Added subject-specific validation for trading and execution (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `d02eb9461aef` → `0de771cee95e` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "market-making": {
+      "reviewed_sha256": "cb407444e5ab4b122d8d4641ed284135ce87b0d96a2a59f51ff3078e550128fa",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Trading and execution.\n- **Review signals:** `third-party-api (4; L72, L74)`, `live-data (2; L92, L94)`\n- **Edits:** Added subject-specific validation for trading and execution (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `dc8c0090cba0` → `cb407444e5ab` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "merkle-tree-patterns": {
+      "reviewed_sha256": "9ead07d1c49e0ba090a3a86f793bd41e587d932814d7f533b6689b8ba0e78732",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `unguarded-install (1; L31)`, `third-party-api (2; L24, L30)`\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `b74f80d62b0d` → `9ead07d1c49e` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "mev-infrastructure": {
+      "reviewed_sha256": "e2f9a843b16d8028440156b02fbb8a71bd30511fa3a85ed228d14857185f1ca0",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unguarded-install (1; L31)`, `third-party-api (4; L38, L42)`, `live-data (2; L160, L162)`\n- **Edits:** Replaced 1 remote curl-to-shell installation example(s) with safer official-install verification guidance. Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `998bfd95f357` → `e2f9a843b16d` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "mev-strategies": {
+      "reviewed_sha256": "635fc7fc7a69437859d67706f0779be2d5a22dd1b7e759461d0b2c35c6df7891",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Trading and execution.\n- **Review signals:** `absolute-percent-benchmark (1; L117)`, `third-party-api (3; L64, L141)`, `live-data (1; L115)`\n- **Edits:** Added subject-specific validation for trading and execution (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `7344f5279a97` → `635fc7fc7a69` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "monitoring-alerting": {
+      "reviewed_sha256": "de467f7c0001e55c4194e6df5b7464b6fdf3397bd427172c0a56193bc4b16514",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `credential-security (1; L55)`, `third-party-api (3; L20, L137)`, `live-data (3; L32, L32)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `f6cf3d13e2f4` → `de467f7c0001` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "move-language": {
+      "reviewed_sha256": "74659087dcd29617330503605303282a2e33d5b96ef2d16d66d05baba1b073d2",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `credential-security (2; L147, L148)`, `third-party-api (3; L134, L134)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `76b9f64d467a` → `74659087dcd2` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "move-security": {
+      "reviewed_sha256": "94ec299361468fef7409060baf1e87b25983f2cfe3c4b188957a654612b0681f",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Custody and security.\n- **Review signals:** No automated risk patterns matched; reviewed for subject-scope limits.\n- **Edits:** Added subject-specific validation for custody and security (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `2689fad84ab8` → `94ec29936146` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "near-protocol-development": {
+      "reviewed_sha256": "d67f9dee46919bba80db073cbd094c9cc8ffe754cfa0ea7e769765f9ecf86863",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unguarded-install (1; L23)`, `credential-security (1; L232)`, `third-party-api (7; L30, L48)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `be736908a266` → `d67f9dee4691` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "neon-evm": {
+      "reviewed_sha256": "a3674f0f21881251b54ecaa1a7459d8070a711c4b217e4d3653c5dfbbe6bb9da",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `third-party-api (7; L15, L26)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `26a05401f4c1` → `a3674f0f2188` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "nft-strategy": {
+      "reviewed_sha256": "97533b4e922eb9fce0e831f3c3d70bd753adc7269afea3bdfffacb0b6ba93a41",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `legal-or-compliance (1; L46)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `a3266a8dbb51` → `97533b4e922e` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "node-infrastructure": {
+      "reviewed_sha256": "3b445797230d567c3403acb8ab06645f7eba5f14be19783e4f231309534424e6",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `credential-security (1; L83)`, `third-party-api (8; L35, L83)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `190e4cf41c2b` → `3b445797230d` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "on-chain-analytics": {
+      "reviewed_sha256": "4c34abac6fe2e4c767389c317f60ef5a2b01637d14eb9f58bc9ae41dfe3ac5c5",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `third-party-api (2; L91, L136)`, `live-data (3; L63, L101)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `51a4dfd32c92` → `4c34abac6fe2` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "operational-security": {
+      "reviewed_sha256": "bf0409db4cf5aab2d1b73fee3c30e12c754e233aa0bfc0ca4705c0c4216ebdd8",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Custody and security.\n- **Review signals:** `credential-security (5; L109, L152)`, `third-party-api (5; L30, L61)`, `legal-or-compliance (1; L138)`, `live-data (2; L154, L166)`\n- **Edits:** Added subject-specific validation for custody and security (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `cafd86846eb9` → `bf0409db4cf5` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "optimism-development": {
+      "reviewed_sha256": "6cdd65295bcf6f677068e6fbce69601d22d5ac9039c3f51f505880bb3ccc606c",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unguarded-install (1; L29)`, `credential-security (1; L133)`, `third-party-api (14; L21, L24)`\n- **Edits:** Replaced 1 remote curl-to-shell installation example(s) with safer official-install verification guidance. Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `a87ad21f8a96` → `6cdd65295bcf` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "options-vaults": {
+      "reviewed_sha256": "bd0c419d7787e86aebb4f3273877d8cc88998ce27fd65d96a1960fd3febf894e",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** DeFi protocol economics.\n- **Review signals:** `unguarded-install (1; L26)`, `third-party-api (1; L39)`, `live-data (2; L108, L155)`\n- **Edits:** Replaced 1 remote curl-to-shell installation example(s) with safer official-install verification guidance. Added subject-specific validation for defi protocol economics (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `f0e35a023c87` → `bd0c419d7787` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "oracle-manipulation-defense": {
+      "reviewed_sha256": "a8bf61cca73798f97a7481cfa4c1ebc783ba6fad4b8c640554949605d4cb5484",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Custody and security.\n- **Review signals:** `unguarded-install (1; L28)`, `third-party-api (7; L24, L40)`\n- **Edits:** Replaced 1 remote curl-to-shell installation example(s) with safer official-install verification guidance. Added subject-specific validation for custody and security (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `944cd3981ca3` → `a8bf61cca737` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "ordinals-inscriptions": {
+      "reviewed_sha256": "ad6a5e209345be6b839a4434f244ee2c0578b648cb79d076f34fad3a16dbcb15",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unguarded-install (1; L34)`, `credential-security (2; L180, L180)`, `live-data (2; L84, L189)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `22e6b43dbe3f` → `ad6a5e209345` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "perpetual-dex": {
+      "reviewed_sha256": "16f0eabaf649decedb42ac1561677ec46576b310e3080409838b5b2a06584e2d",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `third-party-api (1; L85)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `941a6bddecc7` → `16f0eabaf649` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "polkadot-substrate": {
+      "reviewed_sha256": "9eb0c49c9092cb646906945a37169481aa7c3f90e0083d79b63851aa1fcc8ffa",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unguarded-install (1; L24)`, `third-party-api (20; L52, L54)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `eab900cd181b` → `9eb0c49c9092` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "polygon-development": {
+      "reviewed_sha256": "039617079385c66a6f7bd97e73356aa33ddbcb9221f2621957e15177ad6ebe4e",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `credential-security (7; L32, L68)`, `third-party-api (3; L26, L68)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `c9e0dbad966d` → `039617079385` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "portfolio-construction": {
+      "reviewed_sha256": "21eabce4bc12a40002a8c951808a974b5b1145cdeb463aea458d811932f45689",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Trading and execution.\n- **Review signals:** `absolute-percent-benchmark (3; L122, L148)`, `unqualified-performance (1; L87)`, `financial-assumptions (1; L87)`, `legal-or-compliance (3; L183, L187)`\n- **Edits:** Corrected an unsupported or overly categorical statement (1 occurrence(s)). Added subject-specific validation for trading and execution (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `ccc61d2527a8` → `21eabce4bc12` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "prediction-markets-onchain": {
+      "reviewed_sha256": "f7d02c17d2944fdcf94805bf1fd5ab8cee38ab29b03c856631431d3646821937",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `third-party-api (8; L32, L41)`, `legal-or-compliance (1; L277)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `b0e56fbbcd10` → `f7d02c17d294` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "quant-trading-strategies": {
+      "reviewed_sha256": "bcfb472108bdc0048e7c4847f79604f6ca16b733af657916667ead4e1c068da4",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Trading and execution.\n- **Review signals:** `third-party-api (1; L166)`, `financial-assumptions (7; L102, L103)`\n- **Edits:** Added subject-specific validation for trading and execution (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `38980fb3c801` → `bcfb472108bd` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "real-world-assets-rwa": {
+      "reviewed_sha256": "371a33a0f9419a6c8bad2f73c9d71215550efd2d578be30cafc2840d85723b2f",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Regulated crypto activity.\n- **Review signals:** `credential-security (1; L44)`, `third-party-api (3; L27, L35)`, `legal-or-compliance (15; L4, L4)`\n- **Edits:** Added subject-specific validation for regulated crypto activity (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `d438e8c10a00` → `371a33a0f941` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "reentrancy-prevention": {
+      "reviewed_sha256": "5e5a8c1f2cd559f8d432f8673726837bfcebda0addc4b45051061d952f7f7612",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `unguarded-install (1; L28)`, `third-party-api (4; L24, L36)`\n- **Edits:** Replaced 1 remote curl-to-shell installation example(s) with safer official-install verification guidance. Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `a3c99a25c0fd` → `5e5a8c1f2cd5` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "restaking-eigenlayer": {
+      "reviewed_sha256": "430a676c04ce66295b250bd47e1263a941b85458b0a21de627074eab8ef2bcef",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** DeFi protocol economics.\n- **Review signals:** `unguarded-install (1; L25)`, `credential-security (1; L51)`, `third-party-api (6; L33, L37)`\n- **Edits:** Replaced 1 remote curl-to-shell installation example(s) with safer official-install verification guidance. Added subject-specific validation for defi protocol economics (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `55d9243b1732` → `430a676c04ce` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "risk-management-crypto": {
+      "reviewed_sha256": "b0e4bb2fc6166ebe1bfdbbd8d41786b470b403624241e6dc8cdf9ade3a9574ea",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Trading and execution.\n- **Review signals:** `third-party-api (2; L96, L210)`, `financial-assumptions (29; L3, L21)`, `live-data (3; L59, L134)`\n- **Edits:** Corrected an unsupported or overly categorical statement (1 occurrence(s)). Added subject-specific validation for trading and execution (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `78811d555326` → `b0e4bb2fc616` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "rpc-provider-management": {
+      "reviewed_sha256": "67f95040aca13a76e8a049d3cb30435701ef2d7238b9408dc59539d4572ce2da",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `credential-security (3; L41, L41)`, `third-party-api (10; L25, L35)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `b1bff9246605` → `67f95040aca1` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "rust-blockchain-dev": {
+      "reviewed_sha256": "1f3d47f6736913b5f3a155f20d6d1dafd5037d94f1c052f8f7ab7cc48b5e0591",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** No automated risk patterns matched; reviewed for subject-scope limits.\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `5ff5e515c57e` → `1f3d47f67369` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "rust-solana-programs": {
+      "reviewed_sha256": "0d8046522e20d903d4c6e590c86fc36c53183bcbf996aff088dc39f4c055f708",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unguarded-install (1; L24)`, `credential-security (2; L163, L229)`, `third-party-api (2; L34, L48)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `984eb09c2d3b` → `0d8046522e20` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "smart-contract-auditing": {
+      "reviewed_sha256": "2f385e4c4cc067b9919fb2ede307f4325f38efa8af9a47650a8c82624b637417",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** No automated risk patterns matched; reviewed for subject-scope limits.\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `b2868c71ab37` → `2f385e4c4cc0` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "smart-contract-deployment": {
+      "reviewed_sha256": "ac322f9b27929ceab8308739ce4c4ee0f98b9864287c962a6d4e1c20d99ea3ec",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `credential-security (5; L31, L186)`, `third-party-api (12; L13, L26)`\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `72cc63c21233` → `ac322f9b2792` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "smart-contract-testing": {
+      "reviewed_sha256": "ff70c7d2dd53c81b085d36ace4eb282917a986da464f2aa36484641bde295bb0",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** No automated risk patterns matched; reviewed for subject-scope limits.\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `310ebd899396` → `ff70c7d2dd53` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "solana-anchor-framework": {
+      "reviewed_sha256": "aebcfe4fd4a0f3327976b839a7d357646c52816a87b8a597694634e23e6d6bda",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unguarded-install (1; L23)`, `credential-security (1; L184)`, `third-party-api (9; L19, L30)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `8b96e8c3d6b2` → `aebcfe4fd4a0` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "solana-rpc-infrastructure": {
+      "reviewed_sha256": "91eeb63c05b93ae351ca77b2e1a8316e2c8f644a9fe7148f46ff4922f1b67734",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `third-party-api (8; L17, L24)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `486b5a64a65f` → `91eeb63c05b9` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "solana-security": {
+      "reviewed_sha256": "a8cf845e64f95bef421d181f4c5972b966daa6dc54f9c01f98a110fc0d6aa33a",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Custody and security.\n- **Review signals:** `unguarded-install (1; L23)`, `third-party-api (1; L30)`\n- **Edits:** Added subject-specific validation for custody and security (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `91dea1eb0e4d` → `a8cf845e64f9` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "solana-trading-bots": {
+      "reviewed_sha256": "acb6998d66d32cab7635b4cf8cd7e35840193ae59327ad318ed8fea74237df36",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Trading and execution.\n- **Review signals:** `third-party-api (9; L28, L33)`, `live-data (2; L15, L174)`\n- **Edits:** Added subject-specific validation for trading and execution (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `ad5ae1babb98` → `acb6998d66d3` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "solidity-patterns": {
+      "reviewed_sha256": "13ca31a038906087a55fd76db67e160642f4518c2f78e6ae25a25a32d4607e03",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `credential-security (1; L21)`\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `e17a5dafcb3e` → `13ca31a03890` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "solidity-smart-contracts": {
+      "reviewed_sha256": "9f0c7c2cb15cc062b0a50c3a56b4c5923e310f5b166f7b3333e394f1920f990e",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `third-party-api (2; L174, L190)`, `financial-assumptions (1; L30)`\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `14cf80a4b633` → `9f0c7c2cb15c` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "stablecoin-mechanics": {
+      "reviewed_sha256": "50ae8e27ada6f9820e6ce7182ecd09891fab4d946e5dcdbe4c5d7cc6bf37fa17",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** DeFi protocol economics.\n- **Review signals:** `legal-or-compliance (1; L51)`\n- **Edits:** Added subject-specific validation for defi protocol economics (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `6d053ec7da73` → `50ae8e27ada6` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "staking-contracts": {
+      "reviewed_sha256": "ada59e9def404bdc43faea783b566b899f261013f40a137e7a57b8d262f18988",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `unguarded-install (1; L21)`, `credential-security (1; L284)`, `third-party-api (1; L33)`\n- **Edits:** Replaced 1 remote curl-to-shell installation example(s) with safer official-install verification guidance. Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `be910b057411` → `ada59e9def40` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "starknet-cairo": {
+      "reviewed_sha256": "00fb6cfea4eaeb33587d6a6c0e99906bb5ee5e9435ca0f9d1da2ffa407dda79f",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unguarded-install (2; L23, L32)`, `credential-security (2; L166, L169)`, `third-party-api (3; L27, L36)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `290bccc36277` → `00fb6cfea4ea` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "subgraph-development": {
+      "reviewed_sha256": "407810590201bda9bc2bb028d5e3ee018c44e8bc8fe9d240a8c1569ec316b52c",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `third-party-api (2; L13, L21)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `9c3e7cd29915` → `407810590201` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "substrate-pallets": {
+      "reviewed_sha256": "9f59d24d2630bd6ad0ccb1962d8b4813d53939ec18370e81e7158d1e43154a9e",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `unguarded-install (1; L24)`, `third-party-api (1; L165)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `ac4cd9f38ed9` → `9f59d24d2630` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "telegram-trading-bots": {
+      "reviewed_sha256": "8e74c3f9c1af6490f536ab6dd9146828d9f291641d09598bf8dfeaf1c0c79f02",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Trading and execution.\n- **Review signals:** `credential-security (3; L17, L275)`, `third-party-api (15; L15, L17)`, `live-data (7; L9, L13)`\n- **Edits:** Added subject-specific validation for trading and execution (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `ce811b51bbd4` → `8e74c3f9c1af` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "the-graph-development": {
+      "reviewed_sha256": "30df7cef5dd2e6ceeadfe98fa6fb319bca05410bb3335ed7acfff072745e9179",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `third-party-api (4; L210, L210)`, `live-data (1; L29)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `f5f9baa648af` → `30df7cef5dd2` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "time-lock-security": {
+      "reviewed_sha256": "82b8d2ddc24710cfc6e2b37a5a366bf0e9435adeb7cdc932dddbd229ee3ab857",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Custody and security.\n- **Review signals:** `unguarded-install (1; L36)`, `credential-security (1; L45)`, `third-party-api (2; L26, L42)`\n- **Edits:** Replaced 1 remote curl-to-shell installation example(s) with safer official-install verification guidance. Added subject-specific validation for custody and security (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `3b862f6e958f` → `82b8d2ddc247` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "token-standards-creation": {
+      "reviewed_sha256": "9f1c99280dbc76f75995e406b920097b63a055e3bb7451ee8cbdb73db54d884a",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `third-party-api (2; L87, L227)`, `legal-or-compliance (1; L4)`\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `7a32871c72e1` → `9f1c99280dbc` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "tokenomics-design": {
+      "reviewed_sha256": "247a79241f1477feb83a609783095889c2d3144273e71f13080b6b948a624a5a",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `absolute-percent-benchmark (2; L84, L102)`, `legal-or-compliance (2; L120, L232)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `721da0786a73` → `247a79241f14` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "ton-development": {
+      "reviewed_sha256": "1d0d275adccb4ebfbc67bf5644c5d7388b763af27ece91b5f3cb8821967b698d",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `credential-security (2; L235, L235)`, `third-party-api (15; L19, L24)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `01c4fb18e98d` → `1d0d275adccb` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "trading-bot-architecture": {
+      "reviewed_sha256": "d5820783ebab4bc00f8fd6dfd1b8d1bbf456f28ff397e47a4912dbf8d22b5a91",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Trading and execution.\n- **Review signals:** `credential-security (7; L301, L303)`, `third-party-api (19; L90, L133)`, `financial-assumptions (1; L250)`, `live-data (2; L137, L245)`\n- **Edits:** Added subject-specific validation for trading and execution (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `6747c68a83b0` → `d5820783ebab` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "treasury-management": {
+      "reviewed_sha256": "4a3acfdc800403bc2671784529cf9fb63a11ff42c30d480ef690954d0f4330ca",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `absolute-percent-benchmark (1; L181)`, `financial-assumptions (1; L55)`, `legal-or-compliance (6; L99, L149)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `d4b23ba265d3` → `4a3acfdc8004` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "upgrade-patterns-security": {
+      "reviewed_sha256": "d700b07b8f37be0a875e99c2522af12922f5844d2c7002c2031870c265b7b7d7",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `credential-security (1; L163)`\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `57301ef1f4f8` → `d700b07b8f37` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "upgradeable-contracts": {
+      "reviewed_sha256": "5e746662f5bfbfe57dfd683b5891d472c7dc3191db72dd01c981232ca468b270",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Contract engineering.\n- **Review signals:** `credential-security (1; L231)`, `third-party-api (3; L32, L133)`\n- **Edits:** Added subject-specific validation for contract engineering (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `df422ff777c5` → `5e746662f5bf` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "viem-wagmi": {
+      "reviewed_sha256": "3c6438a294bd8f9f1530b02e73d653fbad3f15ddf3b2e026c43bc780a6dfdd00",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `third-party-api (3; L17, L316)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `e29d995cc452` → `3c6438a294bd` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "wallet-connect": {
+      "reviewed_sha256": "bddbc81613b6c53ff5d8c5b0096f888238ebf7cadbec2b0ee37a1171ce3b90fd",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Custody and security.\n- **Review signals:** `third-party-api (10; L13, L17)`\n- **Edits:** Added subject-specific validation for custody and security (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `ee179736f2b9` → `bddbc81613b6` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "wallet-integration": {
+      "reviewed_sha256": "26b08b333ac6075add54dc0d6d28cdd1170911df69989fddd91fbdc98be3c78b",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Custody and security.\n- **Review signals:** `credential-security (1; L231)`, `third-party-api (3; L32, L133)`\n- **Edits:** Added subject-specific validation for custody and security (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `e26fd264880d` → `26b08b333ac6` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "wallet-security": {
+      "reviewed_sha256": "2a6d9ba1d665f3ed93ea5f622dff31f5aceeea532cd0b3dafe1e3b3e9198815b",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Custody and security.\n- **Review signals:** `credential-security (13; L13, L21)`\n- **Edits:** Added subject-specific validation for custody and security (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `c7c5b605f32d` → `2a6d9ba1d665` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "yield-farming": {
+      "reviewed_sha256": "da2df3d69e1f69d579900e46b0db590b17f3ea5931d9443b67c6601fb3a1592d",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** DeFi protocol economics.\n- **Review signals:** `absolute-percent-benchmark (6; L61, L62)`, `financial-assumptions (1; L122)`\n- **Edits:** Added subject-specific validation for defi protocol economics (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `31c74442587f` → `da2df3d69e1f` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    },
+    "zk-development": {
+      "reviewed_sha256": "a6aa473cf9636299bc11edbee002388ada3ad2ff6bc2fe0d9957adb710988e7a",
+      "review_type": "historical_static_review",
+      "summary": "- **Focus:** Blockchain ecosystem / development.\n- **Review signals:** `credential-security (1; L315)`, `financial-assumptions (1; L58)`\n- **Edits:** Added subject-specific validation for blockchain ecosystem / development (2 controls plus version/evidence checks).\n- **Remaining check:** confirm versioned third-party integrations, numeric claims and subject-specific assumptions against current primary sources before production use. No live integration was executed.\n- **Change verification:** `0c2a0b8316d8` → `a6aa473cf963` (SHA-256 prefixes).",
+      "limitations": "Historical static review; no blanket live/API validation or automatic semantic certification."
+    }
+  }
+}

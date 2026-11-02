@@ -44,3 +44,10 @@ Self-custody is the fundamental value proposition of cryptocurrency, but it tran
 - Neglecting inheritance planning under the assumption that you will always be available to manage your own custody, which statistically becomes false for everyone eventually.
 - Testing recovery only once at initial setup and never again, missing degradation of backup materials, firmware compatibility changes, or procedural knowledge decay over time.
 - Creating overly complex custody schemes with too many steps and dependencies that become impossible to execute reliably and discourage regular testing and maintenance.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Custody and security):** Treat bridge, authorization, signing, key handling and replay risk as potentially loss-causing.
+- **Independent validation:** Avoid secrets in examples; validate controls, testnets, incident procedures and third-party contracts.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

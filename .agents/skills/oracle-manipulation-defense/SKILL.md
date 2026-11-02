@@ -25,7 +25,7 @@ To build and test your oracle-defensive strategies, you'll primarily use Solidit
     npx hardhat init
 
     # Foundry setup
-    curl -L https://foundry.paradigm.xyz | bash
+    # Security: download the verified official installer, inspect it before executing, and follow the current platform-specific installation guide.
     foundryup
     forge init my-project
     ```
@@ -217,3 +217,10 @@ contract OracleCircuitBreaker {
 **Insufficient Deviation Checks.** You either don't implement circuit breakers, or your deviation thresholds are too wide, allowing significant price swings without triggering safety mechanisms. This can lead to large losses during market volatility or successful manipulation attempts. *Set realistic and robust deviation thresholds, and ensure they trigger appropriate safety measures like pausing or reverting.*
 
 **Oracle Scope Misalignment.** You use an oracle for a trading pair or asset that it wasn't designed for, perhaps one with very low liquidity or a novel asset. Such oracles are often easier to manipulate or provide highly volatile, unrepresentative prices. *Only use oracles for assets and pairs they are explicitly designed to support and that have deep market liquidity.*
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Custody and security):** Treat bridge, authorization, signing, key handling and replay risk as potentially loss-causing.
+- **Independent validation:** Avoid secrets in examples; validate controls, testnets, incident procedures and third-party contracts.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

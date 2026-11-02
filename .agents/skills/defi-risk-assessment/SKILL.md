@@ -271,3 +271,10 @@ Risk assessment is not one-time. Implement ongoing monitoring:
   pressure (OFAC sanctions on Tornado Cash affected the entire ecosystem).
 - Do not skip the post-mortem when protocols you have exposure to are exploited. Every
   exploit teaches lessons applicable to your other positions.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (DeFi protocol economics):** Verify collateral parameters, oracle freshness, fees, liquidation and withdrawal constraints.
+- **Independent validation:** Distinguish net yield from nominal rewards; model depeg, hack and liquidity stress.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

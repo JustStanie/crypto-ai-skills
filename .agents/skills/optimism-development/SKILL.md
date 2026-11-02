@@ -26,7 +26,7 @@ Getting started with Optimism development is straightforward, often requiring mi
     ```
     For Foundry:
     ```bash
-    curl -L https://foundry.paradigm.xyz | bash
+    # Security: download the verified official installer, inspect it before executing, and follow the current platform-specific installation guide.
     foundryup
     forge init my-optimism-project
     ```
@@ -246,3 +246,10 @@ estimateGasCost().catch(console.error);
 ## Anti-Patterns
 
 *   **Ignoring the Challenge Period.** Expecting L2-to-L1 withdrawals to be instant. You *must* wait for the fraud proof window
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

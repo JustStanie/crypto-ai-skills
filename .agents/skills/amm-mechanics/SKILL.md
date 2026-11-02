@@ -315,3 +315,15 @@ Use official and implementation-level resources when verification is needed:
 - Curve StableSwap invariant and derivations: https://resources.curve.finance/developer/references/derivations
 
 These are reference pointers, not evidence that any particular pool's live settings have been checked.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (DeFi protocol economics):** Verify collateral parameters, oracle freshness, fees, liquidation and withdrawal constraints.
+- **Independent validation:** Distinguish net yield from nominal rewards; model depeg, hack and liquidity stress.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.
+
+
+## AMM version and invariant verification
+
+Uniswap v2/v3/v4, Curve and Balancer have different invariants, fee accounting and state-transition APIs. Do not extrapolate a constant-product approximation outside its assumptions. For v4 hooks, test the exact installed core/periphery versions, balance deltas and permissions; verify slippage and LP returns against executable simulations before deployment.

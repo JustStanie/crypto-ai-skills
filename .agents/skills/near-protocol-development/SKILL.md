@@ -20,7 +20,7 @@ To build on NEAR, you'll need the Rust toolchain for smart contracts and `near-c
 
 1.  **Install Rust and `wasm32-unknown-unknown` target:**
     ```bash
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     source $HOME/.cargo/env
     rustup target add wasm32-unknown-unknown
     ```
@@ -244,3 +244,10 @@ NEAR_ENV=testnet near view mycounter.testnet get_num
 
 **Inadequate Gas Management.** Transactions fail silently or with vague errors because you didn't allocate enough gas for complex operations, leading to frustrated users.
 *   **Do this instead:** Provide a reasonable default gas value for change methods (e.g., `300 TGas` or `300 * 10^12 yoctoNEAR`) and allow users or dApp logic to override it if specific operations are known to consume more.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

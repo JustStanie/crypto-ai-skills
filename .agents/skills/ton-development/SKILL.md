@@ -241,3 +241,10 @@ async function sendTransactionWithWallet(contractAddress: string, incrementValue
 *   **Over-relying on External Contract Calls for Critical Logic.** While contracts can call each other, excessive or deeply nested calls can complicate error handling and gas limits. Design for modularity but consider message flow complexity.
 *   **Poor Error Handling for Internal Messages.** Not anticipating and gracefully handling failed internal messages (e.g., due to out-of-gas, invalid input) can leave your contract in an inconsistent state. Always consider `onBounce` or explicit error messages.
 *   **Storing Large Data On-Chain.** TON storage is costly. Storing images, extensive logs, or unoptimized data directly on-chain is inefficient and expensive. Instead, store content
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

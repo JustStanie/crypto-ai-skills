@@ -169,3 +169,10 @@ The matching engine is the heart of an exchange. It must be single-threaded for 
 - Never run a single hot wallet without multi-sig. One compromised key should never be sufficient to move funds.
 - Never skip load testing the matching engine under adversarial conditions (order floods, cancel storms, self-trade attempts).
 - Never treat the order book as eventually consistent. The book must be strongly consistent at all times.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

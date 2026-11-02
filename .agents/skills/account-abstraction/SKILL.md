@@ -212,3 +212,15 @@ export async function sendSponsoredUserOperation(recipientAddress: `0x${string}`
 ## Version and Evidence Check
 
 API package names and bundler/paymaster endpoints change frequently. Confirm supported chain, EntryPoint version, SDK version, and gas sponsorship policy against current official documentation before using code examples.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.
+
+
+## Account abstraction version check (ERC-4337 / EIP-7702)
+
+Account abstraction comprises multiple mechanisms. Confirm whether the target chain and wallet use ERC-4337, EIP-7702, or both; check supported SDKs, EntryPoint addresses and signing/authorization semantics against the current official documentation. Avoid presenting historical npm examples as maintained release guarantees.

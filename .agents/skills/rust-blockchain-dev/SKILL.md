@@ -220,3 +220,10 @@ CosmWasm contracts can send IBC messages for cross-chain communication within th
 - **Never skip overflow checks in financial math** — use `checked_*` operations or Rust's built-in overflow checks (enabled in debug, disabled in release — configure `overflow-checks = true` in Cargo.toml for release builds).
 - **Never allow arbitrary CPI targets** — whitelist programs you interact with to prevent malicious program substitution.
 - **Never forget to close accounts on Solana** when they are no longer needed — reclaim the rent and prevent stale state from being exploited.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

@@ -44,3 +44,10 @@ Layer 2 scaling is the strategy of moving computation off the base layer while i
 - Concentrating all activity on a single rollup without considering that sequencer downtime, governance attacks, or security incidents could make assets temporarily or permanently inaccessible.
 - Treating data availability committee attestations as equivalent to on-chain data availability, when DAC-based systems rely on a small committee's honesty and availability.
 - Assuming that rollup transaction costs will always remain low, ignoring that base layer fee spikes directly increase rollup costs for data posting, and that rollup-native congestion can also drive fees higher.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

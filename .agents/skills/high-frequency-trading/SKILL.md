@@ -233,3 +233,10 @@ For processing data from 10+ exchanges simultaneously:
 - **Do not neglect monitoring.** A silent failure in an HFT system can lose money faster than any other type of trading system. Monitor every component. Alert on anomalies. Have kill switches that activate automatically.
 - **Do not underestimate the capital requirements.** HFT profits are small per trade but accumulate over thousands of trades. You need capital to maintain positions on multiple exchanges and to absorb temporary losses.
 - **Do not start with HFT.** If you are new to crypto trading, start with slower strategies (hourly or daily signals). The engineering complexity and capital requirements of HFT are not justified until you have a proven edge and the infrastructure to exploit it.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Trading and execution):** Use venue-specific rules, actual order-book depth, fees, slippage, latency and position limits.
+- **Independent validation:** Separate backtests from live execution; check look-ahead bias, failure recovery, and negative tail scenarios.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

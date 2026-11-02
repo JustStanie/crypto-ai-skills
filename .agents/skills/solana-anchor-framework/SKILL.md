@@ -20,7 +20,7 @@ Before you can build with Anchor, ensure you have Rust, the Solana CLI, and the 
 
 1.  **Install Rust:**
     ```bash
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     source $HOME/.cargo/env
     rustup update
     ```
@@ -286,3 +286,10 @@ describe("PDA interaction", () => {
 ## Version and Evidence Check
 
 The Solana CLI, Anchor and Rust toolchain have compatibility constraints. Resolve an explicitly supported version set from current official documentation; avoid executing version-pinned installation commands blindly.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

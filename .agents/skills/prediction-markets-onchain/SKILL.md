@@ -275,3 +275,10 @@ async function claimMarketWinnings(
 ## Version and Evidence Check
 
 Assess oracle, settlement, disputed-outcome, liquidity and jurisdiction-specific restrictions separately; do not assume a listed market or venue is legal everywhere.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

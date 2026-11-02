@@ -204,3 +204,10 @@ Compliance is not a checkbox exercise — it is a competitive advantage. Firms t
 ## Version and Evidence Check
 
 Jurisdiction, product structure and customer geography determine relevant compliance requirements. Obtain jurisdiction-specific legal review for actual operations.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Regulated crypto activity):** Establish the applicable jurisdiction, legal status and effective date before making compliance claims.
+- **Independent validation:** Require professional review for custody, marketing, reporting and licensing decisions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

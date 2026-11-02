@@ -25,7 +25,7 @@ While reentrancy prevention primarily involves coding patterns, your setup focus
     npx hardhat init
 
     # For Foundry
-    curl -L https://foundry.paradigm.xyz | bash
+    # Security: download the verified official installer, inspect it before executing, and follow the current platform-specific installation guide.
     foundryup
     forge init my-contract --template https://github.com/foundry-rs/foundry-template
     ```
@@ -191,3 +191,10 @@ contract PullPayment {
 **Using `call.value()` without Gas Limits for Untrusted Contracts.** Allowing an attacker to run arbitrary code with significant gas in their fallback function, potentially leading to resource exhaustion or other attacks. *Instead:* When calling untrusted contracts, use `transfer()`/`send()` for simple Ether transfers (acknowledging their gas limitations) or explicitly limit gas with `call{gas: <limit>, value: <amount>}(...)` if more gas is needed, alongside a reentrancy guard.
 
 **Complex Interaction Logic.** Overly convoluted logic involving multiple external calls and state changes within a single function. *Instead:* Simplify your contract's logic. Design for minimal external interactions, making reentrancy vectors easier to spot and mitigate.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Contract engineering):** Check compiler, EVM fork, dependency versions, access control and storage-layout assumptions.
+- **Independent validation:** Validate adversarial properties with tests and independent security review before deployment.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

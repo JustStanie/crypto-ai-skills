@@ -186,3 +186,10 @@ Market microstructure is the study of how prices form. In crypto markets, price 
 - Never use linear correlation for crypto return analysis without checking for non-linearity and tail dependence.
 - Never dismiss whale watching as unsophisticated. Large on-chain movements are material information in crypto markets.
 - Never treat DEX and CEX microstructure as identical. DEX has unique features: MEV, deterministic execution, visible pending transactions.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Trading and execution):** Use venue-specific rules, actual order-book depth, fees, slippage, latency and position limits.
+- **Independent validation:** Separate backtests from live execution; check look-ahead bias, failure recovery, and negative tail scenarios.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

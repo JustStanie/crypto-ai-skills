@@ -20,7 +20,7 @@ Risk management must be automated. A human looking at a dashboard and "deciding"
 
 ### Value at Risk (VaR)
 
-VaR answers: "What is the maximum loss over a given time horizon at a given confidence level?"
+VaR estimates a loss quantile at a stated confidence level and horizon; it is **not** the maximum possible loss. Report expected shortfall and stress scenarios alongside it.
 
 **Parametric VaR:**
 - Assume returns are normally distributed (they are not in crypto, but it is a starting point).
@@ -210,3 +210,10 @@ Allocate risk budget across strategies, not capital:
 ## Version and Evidence Check
 
 Treat example VaR limits, correlations, stress multipliers and position-size thresholds as illustrative rather than universal; calibrate them to current data and risk constraints.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Trading and execution):** Use venue-specific rules, actual order-book depth, fees, slippage, latency and position limits.
+- **Independent validation:** Separate backtests from live execution; check look-ahead bias, failure recovery, and negative tail scenarios.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

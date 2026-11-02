@@ -241,3 +241,10 @@ const gasEstimate = await provider.send("eth_estimateGas", [
 - **Using `tx.origin` for authentication.** This is bad practice on any EVM chain but is especially fragile on Neon where the transaction origin passes through the Neon Proxy. Always use `msg.sender` for access control.
 
 - **Relying on `SELFDESTRUCT`.** The `SELFDESTRUCT` opcode is deprecated in recent EVM versions and its behavior on Neon does not reclaim Solana account rent. Avoid it entirely; use a `pause` pattern with access control instead.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

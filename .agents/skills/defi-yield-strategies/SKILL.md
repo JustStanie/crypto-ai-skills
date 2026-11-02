@@ -44,3 +44,10 @@ Every yield in DeFi has a source, and if you cannot identify that source, you ar
 - Auto-compounding rewards without checking if the reward token has sufficient liquidity for the aggregator to swap at reasonable slippage levels.
 - Failing to account for opportunity cost; a five percent DeFi yield with smart contract risk may be worse than a four percent rate in a lower-risk instrument.
 - Concentrating all yield-generating positions in protocols that share the same oracle infrastructure, creating correlated failure risk across an apparently diversified portfolio.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (DeFi protocol economics):** Verify collateral parameters, oracle freshness, fees, liquidation and withdrawal constraints.
+- **Independent validation:** Distinguish net yield from nominal rewards; model depeg, hack and liquidity stress.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

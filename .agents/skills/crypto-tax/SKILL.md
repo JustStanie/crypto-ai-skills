@@ -48,3 +48,10 @@ Crypto taxation is fundamentally a records problem, not a rates problem. The com
 ## Version and Evidence Check
 
 Tax treatment depends on the actual jurisdiction and relevant tax year. Do not infer liability or filing requirements from generic examples; verify current local rules.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Regulated crypto activity):** Establish the applicable jurisdiction, legal status and effective date before making compliance claims.
+- **Independent validation:** Require professional review for custody, marketing, reporting and licensing decisions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

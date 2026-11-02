@@ -238,3 +238,10 @@ Fund operations is the backbone that enables everything else. If NAV is wrong, i
 - Never treat DeFi positions as equivalent to spot holdings for NAV purposes. DeFi positions have smart contract risk, impermanent loss, and liquidity constraints that must be reflected in valuation.
 - Never skip annual audits. Audited financials are table stakes for institutional credibility.
 - Never underestimate the operational complexity of multi-chain fund management. Every new chain adds reconciliation burden, custody complexity, and tax reporting requirements.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Regulated crypto activity):** Establish the applicable jurisdiction, legal status and effective date before making compliance claims.
+- **Independent validation:** Require professional review for custody, marketing, reporting and licensing decisions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

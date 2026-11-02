@@ -328,3 +328,10 @@ async function fetchEthBalance(address: string) {
 *   **Hardcoded RPC URLs in Application Code.** Embedding provider URLs directly in source code prevents runtime failover, makes credential rotation impossible without redeployment, and risks leaking API keys in version control.
 
 *   **Unbounded Concurrent RPC Requests.** Sending unlimited parallel requests to RPC providers without connection pooling or concurrency limits exhausts provider quotas and causes cascading timeouts across the application.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

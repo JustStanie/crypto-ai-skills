@@ -244,3 +244,10 @@ IPermit2(PERMIT2).permitTransferFrom(
 - **Never launch tokens with hidden admin minting capabilities** — auditors and users will flag it, and it destroys trust.
 - **Never deploy upgradeable token contracts without a compelling reason** — tokens should be immutable to guarantee holder properties.
 - **Never use block.number for snapshots on L2s** — block times vary significantly across L2s. Use block.timestamp or explicit snapshot triggers.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Contract engineering):** Check compiler, EVM fork, dependency versions, access control and storage-layout assumptions.
+- **Independent validation:** Validate adversarial properties with tests and independent security review before deployment.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

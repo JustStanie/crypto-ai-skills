@@ -241,3 +241,10 @@ function ClaimComponent({ userAddress }: { userAddress: Address }) {
 **Storing Leaves On-Chain.** You try to store the entire list of whitelisted addresses directly in your smart contract. This defeats the purpose of Merkle trees, wasting significant gas and increasing deployment costs. Only the Merkle root should be stored on-chain; the individual leaves and proofs are handled off-chain and provided by the user.
 
 **Weak Root Management.** You allow anyone to update the Merkle root or have a single point of failure for root updates
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Contract engineering):** Check compiler, EVM fork, dependency versions, access control and storage-layout assumptions.
+- **Independent validation:** Validate adversarial properties with tests and independent security review before deployment.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

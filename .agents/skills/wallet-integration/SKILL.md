@@ -233,3 +233,10 @@ To run: `npx hardhat run scripts/upgrade.js --network localhost` (or your desire
 **Not Testing the Upgrade Path.** Deploying V1, making some transactions, then deploying V2 and verifying all V1 functionality works and V2 additions integrate seamlessly is crucial. Many issues only surface during this end-to-end upgrade test.
 
 **Using `constructor` in the Implementation Contract.** Any logic in a `constructor` of your implementation contract will *only* run when the implementation contract itself is deployed, not when the proxy points to it. This means your proxy contract's state will not be initialized correctly. Always use `initializer` functions with OpenZeppelin's `Initializable` base.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Custody and security):** Treat bridge, authorization, signing, key handling and replay risk as potentially loss-causing.
+- **Independent validation:** Avoid secrets in examples; validate controls, testnets, incident procedures and third-party contracts.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

@@ -31,7 +31,7 @@ To work with Ordinals, you need a full Bitcoin node and the `ord` command-line t
 
     ```bash
     # Install Rust if you don't have it
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     source $HOME/.cargo/env
 
     # Clone and build ord
@@ -199,3 +199,10 @@ What to do instead: `ord` wallets are designed to prevent accidental spending of
 **Relying Solely on Third-Party Explorers for Wallet Status.**
 What goes wrong: Third-party services might have delays, display incorrect data, or censor certain inscriptions, leading to confusion about your assets.
 What to do instead: Use your own `ord wallet inscriptions` and `ord wallet balance` commands as the single source of truth
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

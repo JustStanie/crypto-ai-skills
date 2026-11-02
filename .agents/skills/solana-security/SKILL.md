@@ -20,7 +20,7 @@ To build and test secure Solana programs, you rely on the standard Solana toolch
 
 1.  **Install Rust:** Solana programs are written in Rust.
     ```bash
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     source $HOME/.cargo/env
     rustup component add rustfmt clippy
     ```
@@ -263,3 +263,10 @@ pub struct BurnFromProgram<'info> {
 **Malleable PDAs.** Allowing attackers to pass in a PDA that was not deterministically derived by your program from canonical seeds. This can enable signature replay attacks or allow an attacker to trick your program into signing for an unintended PDA. Always verify `Pubkey::create_program_address` or use Anchor's `seeds` and `bump` attributes.
 
 **Blind CPI.** Invoking another program without fully understanding its logic, its account expectations, and its potential side effects. This can inadvertently grant excessive privileges to the called program or expose your program to unexpected state changes. Always review the source code of any program you CPI into
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Custody and security):** Treat bridge, authorization, signing, key handling and replay risk as potentially loss-causing.
+- **Independent validation:** Avoid secrets in examples; validate controls, testnets, incident procedures and third-party contracts.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

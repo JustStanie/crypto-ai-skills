@@ -300,3 +300,10 @@ contract UserRegistryFacet {
 ## Anti-Patterns
 
 **Storage Collisions.** Facets attempting to use storage slots that are already in use by other facets or the diamond proxy itself. Always access shared storage through a single, well-defined `DiamondStorage` struct at a
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Contract engineering):** Check compiler, EVM fork, dependency versions, access control and storage-layout assumptions.
+- **Independent validation:** Validate adversarial properties with tests and independent security review before deployment.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

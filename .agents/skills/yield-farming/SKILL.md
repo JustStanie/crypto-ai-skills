@@ -182,3 +182,10 @@ the implied rate and time decay of YT is essential for profitable positioning.
   or economic soundness. Many exploited protocols had billions in TVL.
 - Do not chase yields across obscure chains without understanding bridge security.
   The highest yields often exist on the least secure infrastructure.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (DeFi protocol economics):** Verify collateral parameters, oracle freshness, fees, liquidation and withdrawal constraints.
+- **Independent validation:** Distinguish net yield from nominal rewards; model depeg, hack and liquidity stress.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

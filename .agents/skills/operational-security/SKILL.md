@@ -179,3 +179,10 @@ Multi-Party Computation (MPC) distributes key shares across multiple parties or 
 - Do not treat operational security policies as one-time documents. Review and update quarterly. Policies that do not match actual practice are worse than no policies because they create a false sense of security.
 - Do not assume that because your team is small, you do not need formal procedures. Small teams have less redundancy and more single points of failure, making formal procedures more important, not less.
 - Do not neglect personal operational security. Team members should use password managers, hardware 2FA, separate email addresses for crypto accounts, and minimal social media exposure of their crypto involvement.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Custody and security):** Treat bridge, authorization, signing, key handling and replay risk as potentially loss-causing.
+- **Independent validation:** Avoid secrets in examples; validate controls, testnets, incident procedures and third-party contracts.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

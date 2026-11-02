@@ -294,3 +294,10 @@ query MyTokenData {
 
 *   **Over-indexing.** Indexing every event and transaction on a contract just because it's there. Instead, carefully select only the events and data fields your dApp requires for its specific functionality.
 *   **Inefficient IDs.** Using transaction hash + log index as the `id` for every entity, even when a more natural, contract-specific ID (like a token address or user address
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

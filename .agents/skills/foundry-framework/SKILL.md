@@ -34,7 +34,7 @@ Foundry embraces a Solidity-native testing philosophy: tests are written in the 
 
 ```bash
 # Install Foundry
-curl -L https://foundry.paradigm.xyz | bash
+# Security: download the verified official installer, inspect it before executing, and follow the current platform-specific installation guide.
 foundryup
 
 # Create new project
@@ -411,3 +411,10 @@ contract ForkTest is Test {
 ## Version and Evidence Check
 
 Verify the installed Foundry version, OpenZeppelin dependency version, remappings and network settings before copying deployment commands.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Contract engineering):** Check compiler, EVM fork, dependency versions, access control and storage-layout assumptions.
+- **Independent validation:** Validate adversarial properties with tests and independent security review before deployment.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

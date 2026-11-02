@@ -177,3 +177,10 @@ Unique challenges:
 - **Do not use static spreads.** Volatility changes constantly. A spread that is profitable at 2% daily vol is suicidal at 10% daily vol.
 - **Do not market make on exchanges with unreliable infrastructure.** If the exchange goes down and you cannot cancel orders, you will get picked off on stale quotes.
 - **Do not overlook the carry cost of hedging.** Funding rates on perpetual futures can be 0.1-0.3% per day in extreme markets. This erodes hedge effectiveness.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Trading and execution):** Use venue-specific rules, actual order-book depth, fees, slippage, latency and position limits.
+- **Independent validation:** Separate backtests from live execution; check look-ahead bias, failure recovery, and negative tail scenarios.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

@@ -306,3 +306,10 @@ describe("Gas benchmarks", function () {
 ## Version and Evidence Check
 
 Hardhat major versions differ in configuration format, network connection APIs, plugin packages and test runners. Select one major version and verify examples against its official documentation.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Contract engineering):** Check compiler, EVM fork, dependency versions, access control and storage-layout assumptions.
+- **Independent validation:** Validate adversarial properties with tests and independent security review before deployment.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

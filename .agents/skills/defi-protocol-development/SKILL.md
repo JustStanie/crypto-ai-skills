@@ -227,3 +227,10 @@ Each user's actual debt = `userBorrowPrincipal * currentBorrowIndex / userBorrow
 - **Never ignore the first-depositor attack on ERC-4626 vaults** — seed the vault with initial shares or use virtual shares/assets to prevent share price manipulation.
 - **Never let governance change parameters instantly** — use timelocks so users can exit before unfavorable changes take effect.
 - **Never assume token transfers move the exact amount specified** — fee-on-transfer tokens, rebasing tokens, and tokens with blocklists all break naive assumptions.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Contract engineering):** Check compiler, EVM fork, dependency versions, access control and storage-layout assumptions.
+- **Independent validation:** Validate adversarial properties with tests and independent security review before deployment.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

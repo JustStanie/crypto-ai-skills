@@ -304,3 +304,10 @@ contract GasOptimized {
 - **Using `tx.origin` for authorization.** This is vulnerable to phishing attacks. Always use `msg.sender`.
 - **Missing zero-address checks.** Validate that critical address parameters are not `address(0)`.
 - **Front-running vulnerability.** Public mempool transactions can be observed and front-run. Use commit-reveal schemes or private mempools for sensitive operations.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Contract engineering):** Check compiler, EVM fork, dependency versions, access control and storage-layout assumptions.
+- **Independent validation:** Validate adversarial properties with tests and independent security review before deployment.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

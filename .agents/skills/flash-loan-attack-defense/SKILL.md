@@ -21,7 +21,7 @@ Defending against flash loan attacks primarily involves robust smart contract de
 1.  **Foundry/Hardhat:** Your primary development and testing frameworks. Foundry is particularly good for writing gas-efficient Solidity tests.
     ```bash
     # Install Foundry
-    curl -L https://foundry.paradigm.xyz | bash
+    # Security: download the verified official installer, inspect it before executing, and follow the current platform-specific installation guide.
     foundryup
 
     # Or install Hardhat
@@ -139,3 +139,10 @@ contract ProtectedVault is ReentrancyGuard, Ownable {
 *   **Vulnerable Price Calculation in Callback Contexts.** Computing token prices or exchange rates inside flash loan callback functions where the attacker controls intermediate state leads to manipulated valuations. Separate price determination from execution.
 
 *   **Assuming Flash Loans Only Affect DeFi.** Treating flash loan defense as relevant only for lending protocols ignores that any contract reading on-chain state (NFT appraisals, insurance calculations, reward distributions) can be manipulated through atomic state changes.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Contract engineering):** Check compiler, EVM fork, dependency versions, access control and storage-layout assumptions.
+- **Independent validation:** Validate adversarial properties with tests and independent security review before deployment.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

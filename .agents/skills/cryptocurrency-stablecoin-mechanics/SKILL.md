@@ -44,3 +44,10 @@ A stablecoin's value comes from the credibility of its redemption mechanism, not
 - Using stablecoins as the risk-free rate benchmark in DeFi calculations without accounting for the real credit, smart contract, and regulatory risks they carry.
 - Deploying capital into high-yield stablecoin strategies without understanding that the yield comes from lending to leveraged traders whose liquidation can create bad debt that socializes losses.
 - Dismissing depeg events as buying opportunities without analyzing whether the stability mechanism is functioning as designed or has entered a failure mode from which recovery is uncertain.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (DeFi protocol economics):** Verify collateral parameters, oracle freshness, fees, liquidation and withdrawal constraints.
+- **Independent validation:** Distinguish net yield from nominal rewards; model depeg, hack and liquidity stress.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

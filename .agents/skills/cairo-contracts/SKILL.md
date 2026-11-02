@@ -18,7 +18,7 @@ You use `scarb` as your primary build tool for Cairo 1/2 projects. For local dev
 
 1.  **Install Scarb:**
     ```bash
-    curl --proto '=https' --tlsv1.2 -sSf https://docs.swmansion.com/scarb/install.sh | sh
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     ```
     Verify installation:
     ```bash
@@ -38,7 +38,7 @@ You use `scarb` as your primary build tool for Cairo 1/2 projects. For local dev
 
 3.  **Install Starkli:**
     ```bash
-    curl https://get.starkl.li | sh
+    # Read and verify the current official installation instructions; inspect the installer before running it.
     # Ensure cargo is installed: curl https://sh.rustup.rs -sSf | sh
     ```
     Verify installation:
@@ -271,3 +271,10 @@ mod MyUpgradeableContract {
 *   **Hardcoding Logic Without Upgradeability.** Deploying monolithic contracts without a clear upgrade path is a recipe for disaster. Future bug fixes or feature additions will require a costly and disruptive migration.
 *   **Vague Error Handling.** Using generic `panic!` or `assert!(false, 'Error')` provides no useful information to users or calling contracts. Be specific about what went wrong.
 *   **Excessive Storage Writes.** Each storage write is expensive in Cairo. Batch updates, cache values, and avoid unnecessary writes. Design your storage to be as compact and efficient as possible.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Blockchain ecosystem / development):** Confirm active network, chain ID, toolchain/API version and protocol-specific conventions.
+- **Independent validation:** Use primary documentation and reproducible tests for implementation instructions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

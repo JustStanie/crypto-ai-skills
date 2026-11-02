@@ -180,3 +180,10 @@ Use Foundry's fork testing: `forge test --fork-url $RPC_URL` with tests that rea
 - Do not ignore the social contract of upgradeability. Users chose to deposit funds under the current code. Upgrades that change fundamental economic properties (fee structures, yield distribution, collateral requirements) should go through governance, not admin fiat.
 - Do not leave test upgradeable contracts uninitialized in deployment scripts. Every proxy must be initialized in the same transaction or script that deploys it.
 - Do not assume that because an upgrade worked on testnet, it will work on mainnet. Mainnet state is different. Fork mainnet for simulation.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Contract engineering):** Check compiler, EVM fork, dependency versions, access control and storage-layout assumptions.
+- **Independent validation:** Validate adversarial properties with tests and independent security review before deployment.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

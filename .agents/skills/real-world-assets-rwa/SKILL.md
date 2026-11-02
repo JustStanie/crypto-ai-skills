@@ -295,3 +295,10 @@ contract WhitelistedRWAToken is ERC20, AccessControl {
 *   **Ignoring Jurisdictional Transfer Restrictions.** Allowing unrestricted on-chain transfers of security tokens violates securities regulations in most jurisdictions. Implement transfer restriction hooks that enforce whitelist and compliance checks at the smart contract level.
 
 *   **Omitting Redemption Mechanisms.** Deploying RWA tokens without a clear, auditable redemption path back to the underlying asset traps holders in a one-way tokenization. Always implement and test the full lifecycle including redemption, with documented off-chain processes.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Regulated crypto activity):** Establish the applicable jurisdiction, legal status and effective date before making compliance claims.
+- **Independent validation:** Require professional review for custody, marketing, reporting and licensing decisions.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

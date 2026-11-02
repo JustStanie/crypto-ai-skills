@@ -254,3 +254,10 @@ import { Program, AnchorProvider, web3 } from '@coral-xyz/anchor';
 ## Version and Evidence Check
 
 Verify current priority-fee, blockhash validity, transaction lifecycle, RPC commitment and anti-duplicate mechanisms before live execution.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Trading and execution):** Use venue-specific rules, actual order-book depth, fees, slippage, latency and position limits.
+- **Independent validation:** Separate backtests from live execution; check look-ahead bias, failure recovery, and negative tail scenarios.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.

@@ -196,3 +196,10 @@ Canonical bridges (operated by the L2 team) are the most secure but slowest. Thi
 - **Never bridge without replay protection** — ensure messages cannot be processed twice on the destination chain using nonces or message hashes.
 - **Never ignore gas estimation on the destination chain** — if the gas limit is too low, the message execution fails and funds may be stuck.
 - **Never launch a bridge without a staged rollout** — start with low limits, expand gradually, and maintain emergency pause capabilities.
+
+## Review & Production Validation (2026-10-31)
+
+- **Domain control (Custody and security):** Treat bridge, authorization, signing, key handling and replay risk as potentially loss-causing.
+- **Independent validation:** Avoid secrets in examples; validate controls, testnets, incident procedures and third-party contracts.
+- **Time-sensitive details:** Treat fixed rates, thresholds, package versions, protocols and jurisdiction-specific rules in the examples above as illustrative unless reconfirmed against primary documentation.
+- **Before relying on the result:** State inputs and assumptions; verify calculations and edge cases, and identify what has not been executed or tested.
